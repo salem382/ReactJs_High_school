@@ -1,0 +1,47 @@
+.teachers-search {
+  transform: translateY(-50%);
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.65rem;
+  @media screen and (max-width: 1110px) {
+    font-size: 0.6rem;
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 0.5rem;
+    width: 80%;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.5rem;
+    width: 95%;
+    grid-template-columns: 1fr 60px;
+  }
+  input {
+    background: transparent;
+    border: none;
+    padding: 1.6em;
+    font-size: 1.2em;
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+  .teachersSearchBtn {
+    font-size: 1.2em;
+    background: #00c8d5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    padding: 1em;
+    width: 100%;
+  }
+}

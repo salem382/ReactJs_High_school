@@ -1,0 +1,85 @@
+@import '../../sass/variables.scss';
+
+.quiz {
+  box-sizing: border-box;
+  color: #6a6868;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: auto;
+  border-radius: 16px;
+  position: relative;
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 20px 0 20px;
+  }
+  p {
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    margin: 0;
+  }
+  form {
+    .element-container {
+      display: flex;
+      padding: 20px;
+      border-bottom: 1px solid #000;
+      &:last-of-type {
+        border: none;
+      }
+      .check-conatiner {
+        position: relative;
+        .bd {
+          position: absolute;
+          z-index: 1;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 6px;
+          box-sizing: border-box;
+          border: 1px solid rgb(118, 118, 118);
+          &:lang(en) {
+            left: 0;
+          }
+          &:lang(ar) {
+            right: 0;
+          }
+        }
+        .bg {
+          position: absolute;
+          z-index: 2;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 6px;
+          background-color: $blueColor;
+          &:lang(en) {
+            left: 0;
+          }
+          &:lang(ar) {
+            right: 0;
+          }
+        }
+      }
+    }
+    input {
+      cursor: pointer;
+      &:lang(en) {
+        margin-right: 20px;
+      }
+      &:lang(ar) {
+        margin-left: 20px;
+      }
+      position: relative;
+      z-index: 3;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+    }
+    button {
+      display: block;
+      position: absolute;
+      bottom: -74px;
+      right: 0px;
+    }
+  }
+}

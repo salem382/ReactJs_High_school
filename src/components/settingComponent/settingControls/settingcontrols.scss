@@ -1,0 +1,21 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+
+.setting-controls {
+  .per-info {
+    @include blue-btn(200px, $blueColor);
+    box-shadow: none;
+    margin-right: 25px;
+  }
+  .pass {
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    color: $blackColor;
+    border-radius: 50px;
+  }
+  .log-out {
+    @include blue-btn(100px, $redColor);
+    box-shadow: none;
+  }
+}

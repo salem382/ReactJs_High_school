@@ -1,0 +1,84 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+@import '../../../sass/animations.scss';
+.banner {
+  font-size: 9px;
+  padding: 10%;
+  width: 100%;
+  &__header--l1 {
+    font-size: 6.4em;
+    color: $purpleColor;
+    margin-bottom: 0.4em;
+    animation: moveFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    &:lang(ar) {
+      transform: translateX(100%);
+      animation: moveFromRight 0.8s ease-out forwards;
+    }
+  }
+  &__header--l2 {
+    font-size: 6.4em;
+    color: $orangeColor;
+    margin-bottom: 5%;
+    line-height: 1.1em;
+    animation: moveFromLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    &:lang(ar) {
+      transform: translateX(100%);
+      animation: moveFromRight 0.8s ease-out 0.2s forwards;
+    }
+  }
+  &__para {
+    font-size: 2em;
+    color: $greyColor2;
+    margin-bottom: 4%;
+    animation: moveFromLeft 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    &:lang(ar) {
+      transform: translateX(100%);
+      animation: moveFromRight 0.8s ease-out 0.4s forwards;
+    }
+  }
+  .action {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: max(10px, 2%);
+    overflow: hidden;
+    animation: moveFromBottom 0.8s ease-out forwards;
+    .btn-solid {
+      width: max(21%, 7em);
+      padding: 0.2em;
+      border-radius: 32px;
+      font-size: 2.4em;
+      font-weight: 600;
+      background-color: $blueColor;
+      border: 2px solid $blueColor;
+      color: #fff;
+    }
+    .btn-outline {
+      width: max(21%, 7em);
+      padding: 0.2em 1em;
+      border-radius: 32px;
+      font-size: 2.4em;
+      color: $blueColor;
+      font-weight: 600;
+      box-shadow: none;
+      border: 2px solid $blueColor;
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 980px) {
+    font-size: 7px;
+  }
+  @media only screen and (max-width: 433px) {
+    font-size: 5px;
+    padding: 4%;
+  }
+}

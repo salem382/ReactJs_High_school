@@ -1,0 +1,9 @@
+.active-video {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 80%;
+  margin: 0rem auto 2rem auto;
+  @media screen and (max-width: 678px) {
+    width: 100%;
+  }
+}

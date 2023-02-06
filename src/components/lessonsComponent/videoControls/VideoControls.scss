@@ -1,0 +1,67 @@
+@import '../../../sass//buttons.scss';
+.video-controls {
+  width: 80%;
+  margin: 0rem auto 2rem auto;
+  font-size: 0.65rem;
+  @media screen and (max-width: 678px) {
+    width: 100%;
+  }
+  .lesson-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (max-width: 678px) {
+      flex-direction: column;
+    }
+    .lesson-actions-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .pdf {
+      margin: 0rem 1rem;
+    }
+  }
+
+  // .leason-header {
+  //   margin: 5vh 0px;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   .lesson-title {
+  //     font-weight: 700;
+  //     font-size: 2.8em;
+  //     color: #4f4b45;
+  //     display: flex;
+  //     align-items: center;
+  //     &::before {
+  //       content: '';
+  //       display: block;
+  //       height: 48px;
+  //       width: 12px;
+  //       margin-right: 24px;
+  //       background: #ffb951;
+  //       border-radius: 50px;
+  //     }
+  //   }
+  // }
+  // .leason-descrp {
+  //   font-size: 1rem;
+  //   font-weight: 400;
+  //   color: #4f4b45;
+  // }
+
+  // .prev {
+  //   background: #ecebe9;
+  //   border-radius: 16px;
+  //   color: #4f4b45;
+  //   font-weight: 500;
+  //   font-size: 0.9rem;
+  //   border: none;
+  //   padding: 10px 12px;
+  //   transition: all 0.4s ease-in-out;
+  //   &:hover {
+  //     background: #d4d4d4;
+  //   }
+  // }
+}

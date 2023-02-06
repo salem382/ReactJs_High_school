@@ -1,0 +1,46 @@
+.light-button {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #1989dc;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: #1989dc;
+  }
+}
+.primary-button {
+  background: #1989dc;
+  border-radius: 16px;
+  padding: 10px 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #fff;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: #fff;
+  }
+}
+.success-button {
+  background: #15be4f;
+  border-radius: 16px;
+  padding: 10px 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #fff;
+  align-self: flex-end;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: #fff;
+  }
+}

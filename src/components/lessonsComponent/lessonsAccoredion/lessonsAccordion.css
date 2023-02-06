@@ -1,0 +1,29 @@
+.accordion-section .accordion-flush  .accordion-button {
+    border-radius: 15px !important;
+    background: #00C8D5;
+    color: #fff;
+}
+.accordion-section button:not(.collapsed)::after,
+.accordion-section .accordion-button::after {
+    background-image: url("../../../assets/imgs/arrow.png")!important; 
+    width: 15px !important;
+    height: 15px !important;
+    background-size: contain !important;
+    display: block;
+    width: 30px;
+    /* margin-right: 80px; */
+}
+.accordion-section button:not(.collapsed):lang(ar)::after,
+.accordion-section .accordion-button:lang(ar)::after {
+    margin-right: 160px;
+}
+
+.accordion-section .ul-item li {
+    color: #777777;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.accordion-section .ul-item li.active {
+    color:#00C8D5;
+}

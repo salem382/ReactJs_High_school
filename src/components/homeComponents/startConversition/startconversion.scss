@@ -1,0 +1,113 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/base.scss';
+.conv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  .title {
+    margin: 42px auto 32px auto;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: #2f2f2f;
+  }
+  @media screen and (max-width: 441px) {
+    font-size: 0.7rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 70%;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: max(61%, 270px);
+      @media screen and (max-width: 628px) {
+        grid-template-columns: 1fr;
+      }
+      .form-input {
+        display: block;
+        outline: none;
+        border: 1px solid #000;
+        padding: 8px;
+        border-radius: 15px;
+      }
+
+      .action {
+        width: 100%;
+        justify-self: center;
+        background-color: $blueColor;
+        border-radius: 22px;
+        color: #fff;
+        padding: 8px;
+        height: 40px;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-left: 10px;
+          &:lang(ar) {
+            order: -1;
+          }
+        }
+        &:hover {
+          img {
+            animation: moveLeftToRight 1s linear infinite alternate;
+            animation-fill-mode: backwards;
+          }
+        }
+      }
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      width: 41%;
+      border: 1px solid #000;
+      border-radius: 12px;
+      gap: 1rem;
+      font-weight: 600;
+      color: #004246;
+      h4 {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      p {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    @media screen and (max-width: 1110px) {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      .links,
+      form {
+        width: 80%;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .links,
+      form {
+        width: 95%;
+      }
+    }
+  }
+}

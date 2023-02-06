@@ -1,0 +1,10 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixin.scss';
+.logo {
+  img {
+    width: 80%;
+    @media (min-width:772px) {
+      width: 100%;
+    }
+  }
+}

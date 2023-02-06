@@ -1,0 +1,21 @@
+.navbar-login-search {
+    box-shadow: none;
+    border: none !important ;
+    top: 8px;
+    @media (max-width:1200px) {
+        left: 10px;
+    }
+}
+
+.navbar-login-search:lang(en)  {
+    left: 10px; 
+}
+
+.navbar-login-search:lang(ar) {
+    right: 10px,
+}
+@media (max-width:1200px) {
+    .navbar-login-search:lang(ar) {
+        right: 10px
+    }
+}

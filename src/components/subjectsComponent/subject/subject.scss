@@ -1,0 +1,62 @@
+@import '../../../sass/mixin.scss';
+@import '../../../sass/variables.scss';
+
+.subject {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.65rem;
+  gap: 7px;
+  max-width: 300px;
+  .subject-img {
+    display: block;
+    width: 100%;
+  }
+  .subject-info {
+    display: flex;
+    justify-content: space-between;
+    .stuNums {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #15be4f;
+      font-weight: 600;
+      font-size: 1em;
+      gap: 5px;
+    }
+    .time {
+      color: #007dd8;
+      font-weight: 600;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      &__icon {
+        display: block;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .name {
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #000;
+    margin: 1em 0px 1.4em 0px;
+  }
+  .teacher-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: capitalize;
+  }
+}

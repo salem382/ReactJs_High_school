@@ -1,0 +1,11 @@
+.morningBanner {
+  color: #fff;
+  .morning-img {
+    position: relative;
+    img {
+      position: absolute;
+      top: -73%;
+      right: 0;
+    }
+  }
+}

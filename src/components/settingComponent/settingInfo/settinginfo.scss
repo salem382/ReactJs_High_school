@@ -1,0 +1,47 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+
+.setting-info {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 15px;
+  margin: 0 auto;
+  .btns-setting-send-data {
+    @media screen and (min-width: 768px) {
+      width: 80%;
+    }
+  }
+  form {
+    input {
+      border: 1.5px solid #e4ebe4;
+      border-radius: 8px;
+      padding: 7px;
+      width: 80%;
+      margin-bottom: 15px;
+      outline: none;
+      &::placeholder {
+        color: #5e6d55;
+      }
+      @media (max-width: 772px) {
+        width: 100%;
+      }
+    }
+  }
+  .setting-phone {
+    display: flex;
+    gap: 2.5rem;
+    width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .verify-label {
+      align-self: flex-start;
+      padding: 10px;
+      border-radius: 16px;
+      cursor: default;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}

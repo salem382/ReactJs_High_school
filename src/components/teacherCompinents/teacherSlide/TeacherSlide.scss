@@ -1,0 +1,24 @@
+.teachersBanner {
+  height: 35vh;
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 6em;
+    color: #fff;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 1110px) {
+    font-size: 0.6rem;
+    height: 30vh;
+  }
+  @media screen and (max-width: 940px) {
+    font-size: 0.5rem;
+    height: 25vh;
+  }
+  @media screen and (max-width: 440px) {
+    font-size: 0.4rem;
+    height: 20vh;
+  }
+}

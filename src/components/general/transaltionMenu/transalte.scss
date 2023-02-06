@@ -1,0 +1,22 @@
+.transalte-drop-down {
+    .dropdown-toggle::after {
+        color: #00C8D5;
+    }
+    svg {
+        color: #00C8D5;
+        font-size: 24px;
+    }
+    .dropdown-toggle {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+    }
+    .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+        background: none;
+        border-color: none;
+    }
+    .transalte-drop-down .btn-check:checked + .btn, .transalte-drop-down .btn.active, .transalte-drop-down .btn.show, .transalte-drop-down .btn:first-child:active, .transalte-drop-down :not(.btn-check) + .btn:active {
+        background: none;
+        border-color: none;
+    }
+}

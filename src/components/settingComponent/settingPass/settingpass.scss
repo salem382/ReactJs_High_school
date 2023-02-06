@@ -1,0 +1,19 @@
+.setting-pass {
+    form {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        padding: 15px;
+        width: 80%;
+    input {
+        border: 1.5px solid #E4EBE4;
+        border-radius: 8px;
+        padding: 7px;
+        width: 80%;
+        margin-bottom: 15px;
+        &::placeholder {
+            color: #5E6D55;
+        }
+        outline: none;
+    }
+    }
+}

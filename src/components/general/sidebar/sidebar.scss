@@ -1,0 +1,30 @@
+.sidebar {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 300px;
+    min-height: 85vh;
+    transition: all .3s ease-in-out;
+    z-index: 99;
+    ul {
+        padding-bottom: 140px;
+    }
+    .personal-info {
+        border-radius: 20px;
+    } 
+    .active-item  {
+        display: block;
+        border: 1px solid #00c8d5;
+        width: 90% !important;
+        padding: 10px 0;
+        color: #00c8d5;
+        border-radius: 12px;
+    }
+    .unactive-item  {
+        width: 90% !important;
+        display: block;
+        cursor: pointer;
+        &:hover {
+            color: #969696;;
+        }
+    }
+} 

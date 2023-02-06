@@ -1,0 +1,45 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  width: 80%;
+  @media screen and (max-width: 768px) {
+    font-size: 0.5rem;
+  }
+  .inputBtn {
+    border: 1.5px solid #e4ebe4;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.4s ease-out;
+    width: 100%;
+    font-size: 1.6em;
+    cursor: text;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: #a3aaa3;
+    }
+    &::placeholder {
+      color: #5e6d55;
+    }
+  }
+  .formBtn {
+    background: #00c8d5;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 2em;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    outline: none;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: darken(#00c8d5, 2%);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.navbar-section {
+    .nav-item {
+        transition: all .1s ease-in-out;
+        &:hover {
+            background-color: rgba(#000, 0.05);
+        }
+    }
+    .nav-item-log {
+        @media (max-width:570px) {
+            font-size: 14px;
+        }
+    }
+    .navbar-sign-up {
+        transition: all .2s ease-in-out;
+        &:hover {
+            color: #fff;
+            background-color: #00C8D5;
+        }
+    }
+    .navbar-log-in {
+        transition: all .2s ease-in-out;
+        border: 2px solid #fff;
+        &:hover {
+            color: #fff;
+            background-color: #00C8D5;
+            border-color: #00C8D5;
+        }
+    }
+    .view-profile {
+        color: #00C8D5;
+        border: 1px solid #00C8D5;
+        border-radius: 15px;
+        transition: all .1s ease-in-out;
+        &:hover {
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: #00C8D5;
+        }
+    }
+}

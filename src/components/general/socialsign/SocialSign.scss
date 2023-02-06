@@ -1,0 +1,53 @@
+.socialSign {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  width: 80%;
+  font-size: inherit;
+  @media screen and (max-width: 768px) {
+    font-size: 0.5rem;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    font-size: 2em;
+    width: 100%;
+    background-color: transparent;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  .appleBtn {
+    border-color: #000;
+  }
+  .gmailBtn {
+    border-color: #4285f4;
+    background-color: #4285f4;
+    color: #fff;
+    &:hover {
+      background-color: darken(#4285f4, 5%);
+    }
+  }
+  .orBar {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding-top: 1.5px;
+  }
+  .orBar:before,
+  .orBar:after {
+    content: '';
+    flex: 1 1;
+    border-bottom: 1.5px solid;
+    margin: auto;
+  }
+  .orBar:before {
+    margin-right: 10px;
+  }
+  .orBar:after {
+    margin-left: 10px;
+  }
+}

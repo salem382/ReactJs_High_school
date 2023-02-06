@@ -1,0 +1,34 @@
+.footer {
+  background-color: #e5eef4;
+  padding: 4vw 10px 10vw 10px;
+  margin-top: 4vw;
+  font-size: 0.65rem;
+  position: relative;
+  .footer-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    color: #00c8d5;
+  }
+  a {
+    font-size: 1.4em;
+    color: #737373;
+  }
+  .logo-para {
+    font-size: 1.4em;
+    color: #737373;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+  }
+  .footer-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @media screen and (max-width: 992px) {
+      background-position: bottom !important;
+    }
+  }
+}
