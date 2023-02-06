@@ -5,7 +5,7 @@
   "navbar-sign-up": "Sign Up",
   "navbar-log-in": "Log In",
   "navbar-search": "Search",
-  "navbar-viewprofile":"View Profile",
+  "navbar-viewprofile": "View Profile",
 
   "footer-about-us": "About Us",
   "footer-contact-us": "Contact Us",
@@ -37,7 +37,6 @@
   "sign-up-form-paragraph": "Already have an account ? ",
   "sign-up-form-link": "Log in",
 
-
   "log-in-form-header": "Log in",
   "log-in-button-apple": "continue with Apple",
   "log-in-button-google": "continue with Google",
@@ -66,7 +65,7 @@
   "profile-personal-information-form-password": "Password",
   "profile-personal-information-form-phone": "Phone",
   "profile-personal-information-form-parent-phone": "Parent phone",
-  "parent_email":"parent Email",
+  "parent_email": "parent Email",
   "profile-personal-information-form-gender": "Gender",
   "profile-personal-information-form-state": "State",
   "profile-personal-information-form-city": "City",
@@ -80,7 +79,7 @@
   "profile-password-form-verify-password": "Verify Password",
   "profile-password-form-button-save": "Save",
   "profile-password-form-button-cancel": "Cancel",
-  "submit-btn":"submit",
+  "submit-btn": "submit",
 
   "ourTeachers-header": "Our Teachers",
   "ourTeachers-card-button": "view lessons",
@@ -133,19 +132,31 @@
   "side-bar-more": "More",
   "side-bar-logout": "Log Out",
 
+  "account-latest-Progress": "Latest Progress",
+  "account-more": "More...",
+  "account-Topic": "Topic",
+  "account-class-progress": "Class Progress",
+  "account-topic": "الموضوع",
 
-  "account-latest-Progress" : "Latest Progress",
-  "account-more":"More...",
-  "account-Topic":"Topic",
-  "account-class-progress":"Class Progress",
-  "account-topic":"الموضوع",
+  "account-good-morning": "Good Morning",
+  "account-good-part-one": "!You’ve learned",
+  "account-good-part-two": "70% of your",
+  "account-good-part-three": " goal this week!",
+  "account-good-part-four": "Keep it up and improve your results!",
 
-  "account-good-morning" :"Good Morning",
-  "account-good-part-one" : "!You’ve learned",
-  "account-good-part-two" : "70% of your",
-  "account-good-part-three" : " goal this week!",
-  "account-good-part-four" : "Keep it up and improve your results!"
-
-
-
+  "terms-heading": "Terms and conditions ",
+  "terms-para-1": "New Brains is an educational platform that is managed by One Two Three for educational services which is an Egyptian registered company that is designated to provide all educational contents and curriculums in Egypt. ",
+  "terms-para-2": "If you would like to join our site ,you have to read ,understand and agree to all terms and conditions ",
+  "term-1": "We can not guarantee the continuation of service without any interruption for any reasons  within or outside the company and the company is not responsible for any damages that may happen as a result of this interruption. ",
+  "term-2": "We have the full right to hold the service  partially or totally for any commercial or other reasons without any warning. The company is not responsible for any damages that may happen as a result of this interruption. ",
+  "term-3": "You have no right to post any content that is illegal, obscene, political, religious, or any content that encourages violence, racism, or bullying or  of any other nature that the company sees as inappropriate and offensive. In this case we will cancel your membership immediately and we have the right to sue you and your guardian for any financial, and or punitive damages.",
+  "term-4": "You agree to pay the full monthly fees for the membership   including any additional taxes that is added to the fees. There will be no membership without payments. ",
+  "term-5": "If you pay through debit or credit cards, payments may be conducted through a third party. The company is not responsible for the safety of your personal information that is held by a third party. ",
+  "term-6": "The company holds the right to contract with a third party to run the site without any warnings with keeping all our obligations. ",
+  "term-7": "If you are under 18 years of age ,the insinuated consent of your guardian will be considered and assumed. ",
+  "term-8": "You can not use the site for any commercial purposes. If proven so ,your membership will be canceled immediately  and we keep our right to sue you and your guardian for any damages that may result from such act. ",
+  "term-9": "If proven that you are involved in any hacking or electronic piracy that will hhurt our site ,your membership will be canceled immediately and you and your guardian will be sued for any damages to the full extent of the law in Egypt and or any country that you might be residing in.",
+  "term-10": "You agree to use the site for your own personal educational purposes without sharing the site with others. If you do not comply with this term your membership will be terminated at once",
+  "term-11": "You have read ,understood and agreed to all terms and conditions and you will agree to any modifications or additions to the terms and conditions. Failure to do so ,you will not be able to join our site.",
+  "term-12": "No refunds will be issued."
 }

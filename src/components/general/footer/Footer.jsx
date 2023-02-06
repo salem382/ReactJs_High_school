@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import './Footer.scss';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,6 +16,13 @@ const Footer = () => {
               <img src='./imgs/home/SocialIconsFB.png' alt='FB' />
               <img src='./imgs/home/SocialIconsINS.png' alt='INS' />
               <img src='./imgs/home/SocialIconsTW.png' alt='TW' />
+            </div>
+            <div className='footer-payments'>
+              <img src='./imgs/footer/MasterCard.png' alt='Master Card' />
+              <img src='./imgs/footer/Visa.png' alt='Visa' />
+            </div>
+            <div style={{ zIndex: 99 }}>
+              <Link to={'/terms'}>Terms and Conditions</Link>
             </div>
           </div>
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
@@ -38,13 +46,16 @@ const Footer = () => {
             <a href='./'>{t('footer-col-2-item-1')}</a>
             <a href='./'>{t('footer-col-2-item-1')}</a>
           </div>
+          <span className='copyrights'>
+            © 2023 NewBrains Website. Built using React.
+          </span>
         </div>
       </Container>
       <div
         className='footer-shape'
         style={{
           background: "url('./imgs/home/footerShape.png') no-repeat left top",
-          height: '50%',
+          height: '45%',
           width: '100%',
         }}
       ></div>

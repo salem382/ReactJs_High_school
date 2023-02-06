@@ -23,6 +23,18 @@
     gap: 20px;
     cursor: pointer;
   }
+  .footer-payments {
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 50px;
+    }
+  }
+  .copyrights {
+    text-align: center;
+    margin-top: 3rem;
+    z-index: 99;
+  }
   .footer-shape {
     position: absolute;
     bottom: 0;
