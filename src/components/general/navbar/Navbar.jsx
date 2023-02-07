@@ -8,6 +8,8 @@ import {setOpenMenu} from '../../../store/openMenuSlice';
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const Navbars = () => {
 
     const navigate = useNavigate ();
@@ -79,8 +81,12 @@ const Navbars = () => {
                             </>):(<>
                              <FontAwesomeIcon onClick={() =>dispatch(setOpenMenu(true))} role="button" className='fs-4' icon={faBars}/>
                             </>)}
+
+
                             <div className='position-absolute bg-white border py-3 rounded'
-                                style={{marginTop:localStorage.getItem("heighNewbrainsToken") && "30px",display:openMenu ? 'block':'none',top:"30px", zIndex:"99",  boxShadow:"0px 0px 3px rgba(0, 0, 0, 0.3)"}}
+                                style={{marginTop:localStorage.getItem("heighNewbrainsToken") && "30px",display:openMenu ? 'block':'none',top:"30px", zIndex:"99",  boxShadow:"0px 0px 3px rgba(0, 0, 0, 0.3)",
+                                width:"150px"
+                            }}
                             >
                                  {localStorage.getItem("heighNewbrainsToken") ? (
                                     <Link to='/subjects' className='nav-link'>
@@ -89,15 +95,29 @@ const Navbars = () => {
                                     >{t("navbar-viewprofile")}</div>
                                     </Link>
                                  ) :  "" }
+
+
+
                                  <p>
-                                    <a onClick={() => dispatch(setOpenMenu(false))} href="#about-us" role="button" className='nav-item fw-bold py-2 px-5 text-black '>{t("navbar-about-us")}</a>
+                                    <a onClick={() => dispatch(setOpenMenu(false))}
+                                     href="#about-us" role="button" 
+                                     className='nav-item fw-bold py-2 text-center text-black d-block'>
+                                        {t("navbar-about-us")}
+                                    </a>
                                  </p>
                                 <Link to={"/teachers"} className='nav-link' onClick={() => dispatch(setOpenMenu(false))}>
-                                    <p  role="button" className='nav-item  fw-bold py-2 px-5 text-ramad '>{t("navbar-our-Teachers")}</p>
+                                    <p  role="button" className='nav-item  fw-bold py-2 text-center text-ramad '>{t("navbar-our-Teachers")}</p>
                                 </Link>
                                 <p>
-                                   <a  onClick={() => dispatch(setOpenMenu(false))}  role="button" href="#start-conversition" className='nav-item  fw-bold py-2 px-5 pb-2 text-black'>{t("navbar-contact-us")}</a>
+                                   <a  onClick={() => dispatch(setOpenMenu(false))}  
+                                   role="button" href="#start-conversition" 
+                                   className='nav-item  fw-bold py-2 text-center pb-2 text-black d-block'>{t("navbar-contact-us")}</a>
                                 </p>
+
+
+
+
+
                                 {localStorage.getItem("heighNewbrainsToken") ? "" : (
                                     <div className='border-top'>
                                         <Link to={"/signup"} className='nav-link'>
@@ -114,6 +134,9 @@ const Navbars = () => {
                                         </Link>  
                                     </div>
                                 )}
+
+
+
                             </div>
                         </div>
                     
