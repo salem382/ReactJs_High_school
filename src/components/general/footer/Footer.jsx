@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useTranslation();
+
+
+  
   return (
     <div className='footer'>
       <Container>
@@ -18,8 +21,8 @@ const Footer = () => {
               <img src='./imgs/home/SocialIconsTW.png' alt='TW' />
             </div>
             <div className='footer-payments'>
-              <img src='/imgs/footer/MasterCard.png' alt='Master Card' />
-              <img src='/imgs/footer/Visa.png' alt='Visa' />
+              <img src={require('../../../assets/imgs/footer/MasterCard.png')} alt='Master Card' />
+              <img src={require('../../../assets/imgs/footer/visa.png')} alt='Visa' />
             </div>
             <div style={{ zIndex: 99}} className='termsAndConditions'>
               <Link to={'/terms'}><span className='text-primary'>Terms and Conditions</span></Link>
