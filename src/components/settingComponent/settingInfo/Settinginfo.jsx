@@ -3,13 +3,28 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-
-
+import LoadingBtn from '../../general/btnReload/BtnReload';
+import {getUser} from '../../../store/currentUser';
+import { useRef } from 'react';
 
 const Settinginfo = () => {
+
+  const fullName = useRef();
+  const Phone = useRef();
+  const Parent_email = useRef();
+  const Parent_phone = useRef();
+  const city = useRef();
+  const state = useRef();
+
+
+
+
   const { t } = useTranslation();
+
+  const dispatch = useDispatch();
+  let formData = new FormData(); 
 
   const { user } = useSelector((state) => state.currentUser);
   const [fileUrl, setFileUrl] = useState(
@@ -18,28 +33,26 @@ const Settinginfo = () => {
 
   const [isPost, setIsPost] = useState(false);
   const [errArr, setErrArr] = useState({});
-  const [msg, setMsg] = useState('');
-  const [userData, setUserData] = useState({
-    name: 'Updated Ahmed',
-    phone: '000000000',
-    parent_phone: '000000000',
-    parent_email: 'pp@gmail.com',
-    city: 'Egypt',
-    state: 'cairo',
-    image: {},
-  });
-
+  const [msg, setMsg] = useState();
+  
   const postData = (e) => {
-    let usr = { ...userData };
-    // usr[e.target.name] = e.target.value;
-    // setUserData({...usr})
-    // console.log (usr);
+    formData.append(e.target.name, e.target.value); 
   };
 
   const postDataForFile = async (e) => {
     setFileUrl(URL.createObjectURL(e.target.files[0]));
-
+    formData.append("image", e.target.files[0]); 
   };
+
+  const clearData = () => {
+    Parent_email.current.value = "";
+    Parent_phone.current.value = "";
+    Phone.current.value = "";
+    fullName.current.value = "";
+    city.current.value = "";
+    state.current.value = "";
+  }
+
 
   const getData = async () => {
     setIsPost(true);
@@ -47,22 +60,25 @@ const Settinginfo = () => {
     try {
       const { data } = await axios.post(
         'https://newbrainshigh.com/api/auth/userUpdateProfile',
-        userData,
+        formData,
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem(
-              'heighNewbrainsToken'
-            )}`,
-          },
+            Authorization: `Bearer ${localStorage.getItem('heighNewbrainsToken')}`,
+            'content-type': 'multipart/form-data'
+          }
         }
       );
+      dispatch(getUser());
       setIsPost(false);
+      setErrArr({});
+      clearData();
+      setMsg("success");
     } catch (error) {
       setIsPost(false);
-      console.log(error.response.data);
-      console.log(error);
+      setErrArr({...JSON.parse(error.response.data)});
     }
   };
+
 
   const submitData = async (e) => {
     e.preventDefault();
@@ -95,7 +111,7 @@ const Settinginfo = () => {
                   accept='image/png, image/jpeg'
                 />
                 <div className='text-danger pt-5' style={{ fontSize: '14px' }}>
-                  {errArr.name && errArr.image[0]}
+                  {errArr.image && errArr.image[0]}
                 </div>
               </div>
             </Col>
@@ -108,6 +124,7 @@ const Settinginfo = () => {
                     'profile-personal-information-form-first-name'
                   )}
                   type='text'
+                  ref={fullName}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.name[0]}
@@ -120,6 +137,7 @@ const Settinginfo = () => {
                   placeholder={t('profile-personal-information-form-phone')}
                   className='me-1 me-md-0'
                   type='number'
+                  ref={Phone}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.phone[0]}
@@ -131,6 +149,7 @@ const Settinginfo = () => {
                   name='parent_email'
                   placeholder={t('parent_email')}
                   type='email'
+                  ref={Parent_email}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.parent_email[0]}
@@ -144,6 +163,7 @@ const Settinginfo = () => {
                     'profile-personal-information-form-parent-phone'
                   )}
                   type='number'
+                  ref={Parent_phone}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.parent_phone[0]}
@@ -156,6 +176,7 @@ const Settinginfo = () => {
                   name='state'
                   placeholder={t('profile-personal-information-form-state')}
                   type='text'
+                  ref={state}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.state[0]}
@@ -167,17 +188,19 @@ const Settinginfo = () => {
                   name='city'
                   placeholder={t('profile-personal-information-form-city')}
                   type='text'
+                  ref={city}
                 />
                 <div className='text-danger' style={{ fontSize: '14px' }}>
                   {errArr.name && errArr.city[0]}
                 </div>
               </div>
-              <div className='btns-setting-send-data mt-4 pb-5 d-flex justify-content-end'>
+              <div className='btns-setting-send-data mt-4 d-flex justify-content-end'>
                 {/* <button className='light-button mx-3'>CANCEL</button> */}
-                <button className='primary-button'>
-                  {t('profile-password-form-button-save')}
+                <button className='primary-button' style={{width:"200px"}}>
+                  {isPost ? <LoadingBtn /> : <span>{t('profile-password-form-button-save')}</span>}
                 </button>
               </div>
+              <p style={{color:"#080", width:"240px"}} className='fw-bold ms-auto text-start mt-2 pb-4'>{msg}</p>
             </Col>
           </Row>
         </form>
