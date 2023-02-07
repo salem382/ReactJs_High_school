@@ -6,9 +6,10 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
+
+
 const Settinginfo = () => {
   const { t } = useTranslation();
-  let newForm;
 
   const { user } = useSelector((state) => state.currentUser);
   const [fileUrl, setFileUrl] = useState(
@@ -30,7 +31,6 @@ const Settinginfo = () => {
 
   const postData = (e) => {
     let usr = { ...userData };
-    newForm.append(e.target.name, e.target.value);
     // usr[e.target.name] = e.target.value;
     // setUserData({...usr})
     // console.log (usr);
@@ -38,13 +38,7 @@ const Settinginfo = () => {
 
   const postDataForFile = async (e) => {
     setFileUrl(URL.createObjectURL(e.target.files[0]));
-    newForm.append('name', 'aaaaaaaa');
-    newForm.append('phone', userData.phone);
-    newForm.append('parent_phone', userData.parent_phone);
-    newForm.append('parent_email', userData.parent_email);
-    newForm.append('city', userData.city);
-    newForm.append('state', userData.state);
-    newForm.append('image', e.target.files[0]);
+
   };
 
   const getData = async () => {
@@ -53,7 +47,7 @@ const Settinginfo = () => {
     try {
       const { data } = await axios.post(
         'https://newbrainshigh.com/api/auth/userUpdateProfile',
-        newForm,
+        userData,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem(

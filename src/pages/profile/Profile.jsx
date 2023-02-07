@@ -17,7 +17,7 @@ const Profile = () => {
       <LoginNavbar />
       <Sidebar />
       <Wrapper>
-        {/* <Settinginfo /> */}
+        <Settinginfo />
       </Wrapper>
     </section>
   );
