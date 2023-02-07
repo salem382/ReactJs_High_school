@@ -58,7 +58,7 @@ function App() {
           <Route path='/lessons/:id' element={<Lessons />} />
           <Route path='/login' element={<Login />} />
           <Route path='/portfolio' element={<Portfolio />} />
-          {/* <Route path='/profile' element = {<Profile/>} /> */}
+          <Route path='/profile' element = {<Profile/>} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/subjects' element={<Subjects />} />
           <Route path='/teachers' element={<Teachers />} />
