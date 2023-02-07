@@ -10,13 +10,9 @@ const Homeslider = () => {
   return (
     <div
       className='banner'
-      style={{
-        background:
-          lang === 'ar'
-            ? "url('./imgs/home/BannerBKAR.png') no-repeat"
-            : "url('./imgs/home/bannerBK.png') no-repeat",
-        backgroundSize: 'cover',
-      }}
+      style={{backgroundImage:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ')' :
+      'url(' +`${require("../../../assets/imgs/home/bg-ar.png")}` + ')'
+    }}
     >
       <Container>
         <h1 className='banner__header--l1'>{t('home-hero-title-1')}</h1>
