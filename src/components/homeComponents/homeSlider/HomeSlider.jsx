@@ -10,8 +10,8 @@ const Homeslider = () => {
   return (
     <div
       className='banner'
-      style={{backgroundImage:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ')' :
-      'url(' +`${require("../../../assets/imgs/home/bg-ar.png")}` + ')'
+      style={{background:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ') no-repeat' :
+      'url(' +`${require("../../../assets/imgs/home/bg-ar.png")}` + ') no-repeat'
     }}
     >
       <Container>
@@ -21,7 +21,11 @@ const Homeslider = () => {
           {t('home-hero-para-1')} <br></br> {t('home-hero-para-2')}
         </p>
         <div className='action'>
-          <button className='btn-solid'>{t('home-hero-join')}</button>
+          <button className='btn-solid'>
+            <Link to={'/signup'} className='nav-link'>
+              {t('home-hero-join')}
+            </Link>
+          </button>
           <button className='btn-outline'>
               <Link to='login' className='nav-link'>
                 {t('home-hero-sign')}
