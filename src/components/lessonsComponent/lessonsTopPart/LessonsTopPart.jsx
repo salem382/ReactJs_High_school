@@ -8,7 +8,8 @@ const LessonsTopPart = () => {
 
     const {lang} = useSelector(state => state.currentLang)
     const {subject} = useSelector(state => state.currentSubject)
-    const {currentUnit, activeVideo} = useSelector(state => state.units)
+    const {currentUnit, activeVideo} = useSelector(state => state.units);
+
 
 
     return (

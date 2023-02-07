@@ -27,9 +27,7 @@ const Settinginfo = () => {
   let formData = new FormData(); 
 
   const { user } = useSelector((state) => state.currentUser);
-  const [fileUrl, setFileUrl] = useState(
-    user.image ? user.image : '/imgs/navbar/user.webp'
-  );
+  const [fileUrl, setFileUrl] = useState();
 
   const [isPost, setIsPost] = useState(false);
   const [errArr, setErrArr] = useState({});
@@ -52,6 +50,10 @@ const Settinginfo = () => {
     city.current.value = "";
     state.current.value = "";
   }
+
+  useEffect(() => {
+    user.image ? setFileUrl("https://newbrainshigh.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
+  },[])
 
 
   const getData = async () => {
