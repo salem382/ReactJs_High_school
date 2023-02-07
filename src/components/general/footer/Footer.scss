@@ -43,4 +43,10 @@
       background-position: bottom !important;
     }
   }
+  .termsAndConditions {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

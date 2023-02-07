@@ -18,6 +18,8 @@ import { setCurrentLang } from './store/currentLangSlice';
 import { getUser } from './store/currentUser';
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
 
+
+
 function App() {
   /* get screen size */
   const dispatch = useDispatch();

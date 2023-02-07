@@ -1,9 +1,29 @@
 import { Container } from 'react-bootstrap';
 import './Terms.scss';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const Terms = () => {
   const { t } = useTranslation();
+
+
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
+
+
+  useEffect(() => {
+    scrollToTop();
+  },[]);
+
+  
+
+
+
+
   return (
     <Container>
       <div className='terms'>

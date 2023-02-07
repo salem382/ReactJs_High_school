@@ -18,11 +18,11 @@ const Footer = () => {
               <img src='./imgs/home/SocialIconsTW.png' alt='TW' />
             </div>
             <div className='footer-payments'>
-              <img src='./imgs/footer/MasterCard.png' alt='Master Card' />
-              <img src='./imgs/footer/Visa.png' alt='Visa' />
+              <img src='/imgs/footer/MasterCard.png' alt='Master Card' />
+              <img src='/imgs/footer/Visa.png' alt='Visa' />
             </div>
-            <div style={{ zIndex: 99 }}>
-              <Link to={'/terms'}>Terms and Conditions</Link>
+            <div style={{ zIndex: 99}} className='termsAndConditions'>
+              <Link to={'/terms'}><span className='text-primary'>Terms and Conditions</span></Link>
             </div>
           </div>
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
