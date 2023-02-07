@@ -9,7 +9,9 @@ const VideoControls = () => {
 
   const dispatch = useDispatch();
 
-  const {noNext} = useSelector(state => state.units);
+  const {noNext, activeVideo} = useSelector(state => state.units);
+
+
   
   return (
     <div className='video-controls'>
@@ -32,7 +34,7 @@ const VideoControls = () => {
           </button>
           <button className='primary-button  start'>
             {' '}
-            <Link to="/test" className='nav-link'>
+            <Link to={`/test/${activeVideo.id}`} className='nav-link'>
               {t('video-controls-start')}
             </Link>
           </button>

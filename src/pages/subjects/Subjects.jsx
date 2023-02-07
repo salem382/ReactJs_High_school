@@ -61,7 +61,7 @@ const Subjects = () => {
             <Container className='px-5'>
               <Row className='g-4'>
                 {subjects.map(element => <Col md={4} key={element.id}>
-                    <Link onClick={() => dispatch(setCurrentSubject(element.name))}  to={`/lessons/${element.id}`}className='nav-link'>
+                    <Link onClick={() => dispatch(setCurrentSubject(element.name))}  to={`/lessons/${element.id}`} className='nav-link'>
                       <Subject subjectData = {element} />
                     </Link>
                   </Col>

@@ -11,6 +11,8 @@ import LessonsAccordion from "../../lessonsComponent/lessonsAccoredion/LessonsAc
 import { NavLink } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import TestAccordion from '../../general/testAccordion/TestAccordion';
+
 
 const Sidebar = () => {
 
@@ -102,7 +104,7 @@ const Sidebar = () => {
                             )
                         }
                     </div>
-                    {location.pathname === `/lessons/${params.id}` || location.pathname == `/test/${params.id}` ? <LessonsAccordion /> : ""}
+                    {location.pathname === `/lessons/${params.id}` ? <LessonsAccordion /> :  location.pathname == `/test/${params.id}`? <TestAccordion /> : ""}
                     <div className="position-absolute w-100 bottom-0">
 
 

@@ -52,7 +52,6 @@ function App() {
 
   return (
     <div className='App' onClick={() => dispatch(setOpenMenu(false))}>
-      {/* <div className='w-25 m-auto'><TransationMenu /></div>  */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -63,7 +62,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/subjects' element={<Subjects />} />
           <Route path='/teachers' element={<Teachers />} />
-          <Route path='/test' element={<Test />} />
+          <Route path='/test/:id' element={<Test />} />
           <Route path='/terms' element={<TermsAndConditions />} />
         </Routes>
       </BrowserRouter>
