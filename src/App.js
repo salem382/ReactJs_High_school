@@ -50,6 +50,9 @@ function App() {
     dispatch(getUser());
   }, []);
 
+
+  
+
   return (
     <div className='App' onClick={() => dispatch(setOpenMenu(false))}>
       <BrowserRouter>

@@ -29,12 +29,6 @@ const Sidebar = () => {
     const {openSidebar, screeSize, sidebarWidth} = useSelector(state => state.sidebar);
     const {lang} = useSelector(state => state.currentLang);
 
-
-    useEffect(() => {
-
-        console.log ()
-    },[])
-
   
     const handleLogout = async () => {
         try {

@@ -5,6 +5,8 @@ import currentLang from "./currentLangSlice";
 import currentUser from './currentUser';
 import units from "./unitsSlice";
 import currentSubject from "./currentSubjectSlice";
+import quiz from './quizSlice';
+import End from './showResultSlice'
 
 
 export default  configureStore({
@@ -13,8 +15,10 @@ export default  configureStore({
         menu,
         currentLang,
         currentUser,
+        quiz,
         units,
-        currentSubject
+        currentSubject,
+        End
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
