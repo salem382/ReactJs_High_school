@@ -17,6 +17,7 @@ import Cookies from 'js-cookie';
 import { setCurrentLang } from './store/currentLangSlice';
 import { getUser } from './store/currentUser';
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
+import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
 
 
 
@@ -58,15 +59,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/lessons/:id' element={<Lessons />} />
+          <Route path='/lessons/:id' element={<ProtectedRoute><Lessons /></ProtectedRoute>} />
           <Route path='/login' element={<Login />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/profile' element = {<Profile/>} />
+          <Route path='/portfolio' element={<ProtectedRoute><Portfolio /></ProtectedRoute>} />
+          <Route path='/profile' element = {<ProtectedRoute><Profile/></ProtectedRoute>} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/subjects' element={<Subjects />} />
+          <Route path='/subjects' element={<ProtectedRoute><Subjects /></ProtectedRoute>} />
           <Route path='/teachers' element={<Teachers />} />
-          <Route path='/test/:id' element={<Test />} />
+          <Route path='/test/:id' element={<ProtectedRoute><Test /></ProtectedRoute>} />
           <Route path='/terms' element={<TermsAndConditions />} />
+          <Route path='*' element={<div className='fs-1 text-center mt-5 text-danger'>Page Not Found 404!</div>} />
         </Routes>
       </BrowserRouter>
     </div>

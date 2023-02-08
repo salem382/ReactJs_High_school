@@ -6,6 +6,8 @@ import ShowResult from '../general/showResult/ShowResult';
 import { useRef } from 'react';
 import {setIsEnd, inCreaseTotalSubmited} from '../../store/showResultSlice';
 
+
+
 const Quiz = () => {
 
 

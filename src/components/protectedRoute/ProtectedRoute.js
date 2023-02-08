@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom"
 
  const ProtectedRoute = (props) => {
 
-    if (localStorage.getItem('newbrainsToken') === null) {
+    if (localStorage.getItem('heighNewbrainsToken') === null) {
         
         return <Navigate  to='/login'/>
     } else {
