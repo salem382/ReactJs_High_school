@@ -20,12 +20,7 @@ const Teachers = () => {
     const token = localStorage.getItem("heighNewbrainsToken");
 
     try {
-        const {data} = await axios.get ("https://newbrainshigh.com/api/auth/getAllTeachers",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const {data} = await axios.get ("https://newbrainshigh.com/api/getAllTeachers");
         setTeachers([...data.teachers]);
         console.log (data.teachers);
     }
