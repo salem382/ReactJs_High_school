@@ -32,8 +32,6 @@ const Quiz = () => {
           setTotalGrade(state => state + Number(quetsionGrade));
       }
       dispatch(inCreaseTotalSubmited());
-      console.log ("total submited = " + totalSubmited);
-      console.log ("total Auestions = " + totalQuestions);
 
       if (totalQuestions == totalSubmited ) {
           dispatch(setIsEnd(true));
