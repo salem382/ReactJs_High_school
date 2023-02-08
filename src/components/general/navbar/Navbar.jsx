@@ -123,13 +123,13 @@ const Navbars = () => {
                                         <Link to={"/signup"} className='nav-link'>
                                             <p role="button" className='nav-item fw-bold nav-item-log py-2 text-blue d-flex justify-content-around align-items-center'>
                                                 <span className='mx-2'>{t("navbar-sign-up")}</span>
-                                                <FontAwesomeIcon className='d-sm-block' icon={faArrowRightToBracket}/>
+                                                <FontAwesomeIcon className='d-sm-block mt-1' icon={faArrowRightToBracket}/>
                                             </p>
                                         </Link>
                                         <Link to={"/login"} className='nav-link'>
                                             <p role="button" className='nav-item fw-bold nav-item-log py-2 py-1  text-blue d-flex justify-content-around align-items-center'>
                                                 <span className='mx-2'>{t("navbar-log-in")}</span>
-                                                <FontAwesomeIcon className='d-sm-block' icon={faArrowRightToBracket}/>
+                                                <FontAwesomeIcon className='d-sm-block mt-1' icon={faArrowRightToBracket}/>
                                             </p>
                                         </Link>  
                                     </div>
