@@ -2,8 +2,12 @@ import './startconversion.scss';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { useRef } from 'react';
+import BtnReload from '../../general/btnReload/BtnReload';
+
 
 const StartConversion = () => {
   const { t } = useTranslation();
@@ -14,6 +18,63 @@ const StartConversion = () => {
       once: false,
     });
   }, []);
+
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const phoneInput = useRef();
+  const messageInput = useRef();
+
+
+  const [isPost, setIsPost] = useState (false);
+  const [userData, setUserData] = useState({
+      name:"",
+      email:"",
+      phone:"",
+      message:""
+  });
+
+  const clearData = () => {
+      nameInput.current.value = "";
+      emailInput.current.value = "";
+      phoneInput.current.value = "";
+      messageInput.current.value = "";
+  }
+
+
+  const postData = (e) => {
+      let usr = {...userData};
+      usr[e.target.name] = e.target.value;
+      setUserData({...usr})
+  }
+
+
+  const getData = async() => {
+      setIsPost(true);
+      try {
+          const {data} = await axios.get(`https://newbrainshigh.com/api/contactUs?name=${userData.name}&message=${userData.message}&phone=${userData.phone}&email=${userData.email}`,null, {
+            params:{
+              name:userData.name,
+              message:userData.message,
+              phone:userData.phone,
+              email:userData.email
+            }
+          })
+          clearData();
+          setIsPost(false);
+      }
+      catch (error) {
+          setIsPost(false);
+      }
+  }
+
+  const submitData = async (e) => {
+      e.preventDefault();
+      getData();
+  }
+
+
+
+
   return (
     <Container>
       <div className='conv' id='start-conversition'>
@@ -41,34 +102,44 @@ const StartConversion = () => {
               </div>
             </li>
           </ul>
-          <form data-aos='fade-up'>
+          <form data-aos='fade-up' onSubmit={(e) =>submitData(e)}>
             <input
+              onChange={(e) => postData(e)}
+              name='name'
               className='form-input'
               type='text'
-              name='username'
               placeholder={t('home-conv-form-name')}
+              ref = {nameInput}
             />
             <input
+             onChange={(e) => postData(e)}
               className='form-input'
               type='text'
               name='phone'
               placeholder={t('home-conv-form-phone')}
+              ref={phoneInput}
             />
             <input
+             onChange={(e) => postData(e)}
               className='form-input'
               type='email'
               name='email'
               placeholder={t('home-conv-form-email')}
+              ref={emailInput}
             />
             <textarea
               className='form-input'
+              onChange={(e) => postData(e)}
               name='message'
               placeholder={t('home-conv-form-message')}
               rows='3'
+              ref={messageInput}
             ></textarea>
             <button className='action'>
-              <span> {t('home-conv-form-button')}</span>{' '}
-              <img src='./imgs/home/rightArrow.png' alt='' />
+              {isPost ? <BtnReload/> : (<>
+                <span> {t('home-conv-form-button')}</span>{' '}
+                <img src='./imgs/home/rightArrow.png' alt='' />
+              </>)}
             </button>
           </form>
         </div>
