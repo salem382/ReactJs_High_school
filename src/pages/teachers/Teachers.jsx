@@ -17,12 +17,10 @@ const Teachers = () => {
   
   const getAllTeachers = async () => {
 
-    const token = localStorage.getItem("heighNewbrainsToken");
-
     try {
         const {data} = await axios.get ("https://newbrainshigh.com/api/getAllTeachers");
-        setTeachers([...data.teachers]);
-        console.log (data.teachers);
+        setTeachers([...data.result]);
+        console.log (data.result)
     }
     catch (error) {
       console.log (error);
@@ -36,7 +34,7 @@ const Teachers = () => {
   }, [])
 
 
-  console.log (localStorage.getItem("heighNewbrainsToken"))
+
 
 
   return (

@@ -6,7 +6,8 @@
 .banner {
   font-size: 9px;
   padding: 10%;
-  width: 100%;
+  width: 100% !important;
+  background-size: cover;
   &__header--l1 {
     font-size: 5.4em;
     color: $purpleColor;

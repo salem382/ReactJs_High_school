@@ -20,11 +20,10 @@ const TeacherComponent = ({teachers}) => {
       <div className="teachersCards">
           <>
             {teachers.map((teacher) => <div key={teacher.id} className="teacher">
-            <img src={"https://newbrainshigh.com/profileImages/teachers/"+ teacher.image} alt={teacher.name.en} 
+            <img src={"https://newbrainshigh.com/profileImages/teachers/"+ teacher.image} alt={teacher.name} 
               style={{height:"200px"}}
             />
-            <h4 className="name">{lang === "en" ? teacher.name.en : teacher.name.ar}</h4>
-            <p className="title my-1">Biology teacher</p>
+            <h4 className="name">{teacher.name}</h4>
             <span className="school">High School</span>
             {/* <button className="action">{t("ourTeachers-card-button")}</button> */}
           </div>)}
