@@ -13,8 +13,8 @@ const Homeslider = () => {
   return (
     <div
       className='banner w-100'
-      style={{background:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ') no-repeat' :
-      'url(' +`${require("../../../assets/imgs/home/bg-ar.png")}` + ') no-repeat'
+      style={{background:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ') no-repeat':
+      'url(' +`${require("../../../assets/imgs/home/bg-ar.png")}` + ') no-repeat', backgroundSize:'cover'
     }}
     >
       <Container>
