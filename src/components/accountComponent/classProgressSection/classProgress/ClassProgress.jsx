@@ -16,7 +16,7 @@ const ClassProgress = ({percent, color, topicName}) => {
                   className="fw-bold fs-sm-5"
                   style={{color:'#2584E9',fontSize:'14px'}}
                 >
-                  {t("account-topic")}
+                  {t("account-Topic")}
                 </div>
               </Col>
               <Col className='col-4 col-sm-2'>
