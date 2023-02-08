@@ -38,6 +38,11 @@ const quizessSlice = createSlice({
         setCurrentQuiz :(state, action) => {
            state.currentQuiz = {...state.quizess[action.payload]};
            state.curentQuizIndx = action.payload;
+           let total_grad = 0;
+            state.currentQuiz.questions.forEach((question) => {
+                total_grad += question.question_grade;
+            })
+            state.currentQuiz.total_grad = total_grad;
         }
     },
     extraReducers:{
@@ -49,6 +54,11 @@ const quizessSlice = createSlice({
         state.isLoading = false;
         state.quizess = JSON.parse(JSON.stringify(action.payload.result));
         state.currentQuiz = {...state.quizess[0]};
+        let total_grad = 0;
+        state.currentQuiz.questions.forEach((question) => {
+            total_grad += question.question_grade;
+        })
+        state.currentQuiz.total_grad = total_grad;
     },
     [getUQuizess.rejected]:(state, action)=> {
         state.isLoading = false;

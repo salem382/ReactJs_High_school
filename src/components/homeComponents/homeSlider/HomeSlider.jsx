@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 const Homeslider = () => {
   const { t } = useTranslation();
   const { lang } = useSelector((state) => state.currentLang);
+
+  
+
   return (
     <div
       className='banner'

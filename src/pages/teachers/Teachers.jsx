@@ -41,6 +41,8 @@ const Teachers = () => {
   }, [])
 
 
+  console.log (localStorage.getItem("heighNewbrainsToken"))
+
 
   return (
     <>
