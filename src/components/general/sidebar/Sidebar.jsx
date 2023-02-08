@@ -31,14 +31,16 @@ const Sidebar = () => {
 
   
     const handleLogout = async () => {
+
+        let token = localStorage.getItem("heighNewbrainsToken");
+        localStorage.removeItem("heighNewbrainsToken");
+        navigate("/")
         try {
             const {data} = await axios.post('https://newbrainshigh.com/api/auth/userLogout',null, {
                 headers: {
-                  'Authorization': `Bearer ${localStorage.getItem("heighNewbrainsToken")}`
+                  'Authorization': `Bearer ${token}`
                 }
             })
-            localStorage.removeItem("heighNewbrainsToken");
-            navigate("/")
             
         }catch (error) {
             console.log (error);

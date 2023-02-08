@@ -1,44 +1,18 @@
 import { Container } from "react-bootstrap";
 import "./TeacherComponent.scss";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import { useSelector } from "react-redux";
 import PageReload from '../../general/pageReload/PageReload';
 
 
 
-const TeacherComponent = () => {
+const TeacherComponent = ({teachers}) => {
   const { t } = useTranslation();
 
-  const [teachers, setTeachers] = useState([]);
+  
 
   const {lang} = useSelector(state => state.currentLang)
-
-  const getAllTeachers = async () => {
-
-    const token = localStorage.getItem("heighNewbrainsToken");
-
-    try {
-        const {data} = await axios.get ("https://newbrainshigh.com/api/auth/getAllTeachers",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        setTeachers([...data.teachers]);
-        console.log (data.teachers);
-    }
-    catch (error) {
-      console.log (error);
-    }
-
-  }
-
-  useEffect (() => {
-
-    getAllTeachers ();
-  }, [])
 
 
   return (

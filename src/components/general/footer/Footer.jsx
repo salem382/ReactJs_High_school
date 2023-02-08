@@ -25,7 +25,7 @@ const Footer = () => {
               <img src={require('../../../assets/imgs/footer/visa.png')} alt='Visa' />
             </div>
             <div style={{ zIndex: 99}} className='termsAndConditions'>
-              <Link to={'/terms'}><span className='text-primary'>Terms and Conditions</span></Link>
+              <Link to={'/terms'}><span className='text-primary'>{t("terms-heading")}</span></Link>
             </div>
           </div>
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
