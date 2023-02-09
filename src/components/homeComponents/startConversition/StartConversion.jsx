@@ -24,7 +24,7 @@ const StartConversion = () => {
   const phoneInput = useRef();
   const messageInput = useRef();
 
-
+  const [msg, setMsg] = useState (false);
   const [isPost, setIsPost] = useState (false);
   const [userData, setUserData] = useState({
       name:"",
@@ -61,6 +61,7 @@ const StartConversion = () => {
           })
           clearData();
           setIsPost(false);
+          setMsg("Success")
       }
       catch (error) {
           setIsPost(false);
@@ -143,6 +144,7 @@ const StartConversion = () => {
             </button>
           </form>
         </div>
+        {<p className='fw-bold  border ms-5 d-block' style={{color:"#080"}}>Success</p>}
       </div>
     </Container>
   );

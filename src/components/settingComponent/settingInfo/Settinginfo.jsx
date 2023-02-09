@@ -9,6 +9,8 @@ import LoadingBtn from '../../general/btnReload/BtnReload';
 import {getUser} from '../../../store/currentUser';
 import { useRef } from 'react';
 
+
+
 const Settinginfo = () => {
 
   const fullName = useRef();
@@ -38,8 +40,8 @@ const Settinginfo = () => {
   };
 
   const postDataForFile = async (e) => {
-    setFileUrl(URL.createObjectURL(e.target.files[0]));
     formData.append("image", e.target.files[0]); 
+    setFileUrl(URL.createObjectURL(e.target.files[0]));
   };
 
   const clearData = () => {
@@ -53,7 +55,7 @@ const Settinginfo = () => {
 
   useEffect(() => {
     user.image ? setFileUrl("https://newbrainshigh.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
-  },[])
+  },[user])
 
 
   const getData = async () => {
@@ -122,7 +124,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='name'
-                  placeholder={t(
+                  placeholder={user.name ? user.name : t(
                     'profile-personal-information-form-first-name'
                   )}
                   type='text'
@@ -136,7 +138,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='phone'
-                  placeholder={t('profile-personal-information-form-phone')}
+                  placeholder={user.phone ? user.phone : t('profile-personal-information-form-phone')}
                   className='me-1 me-md-0'
                   type='number'
                   ref={Phone}
@@ -149,7 +151,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_email'
-                  placeholder={t('parent_email')}
+                  placeholder={user.parent_email ? user.parent_email :  t('parent_email')}
                   type='email'
                   ref={Parent_email}
                 />
@@ -161,7 +163,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_phone'
-                  placeholder={t(
+                  placeholder={user.parent_phone ? user.parent_phone : t(
                     'profile-personal-information-form-parent-phone'
                   )}
                   type='number'
@@ -176,7 +178,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='state'
-                  placeholder={t('profile-personal-information-form-state')}
+                  placeholder={user.state ? user.state :  t('profile-personal-information-form-state')}
                   type='text'
                   ref={state}
                 />
@@ -188,7 +190,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='city'
-                  placeholder={t('profile-personal-information-form-city')}
+                  placeholder={user.city ? user.city : t('profile-personal-information-form-city')}
                   type='text'
                   ref={city}
                 />

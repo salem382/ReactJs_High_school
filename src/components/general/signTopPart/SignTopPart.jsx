@@ -12,7 +12,7 @@ const SignTopPart = () => {
                 </Link>
             </div>
             <div>
-                <TranstionMenu />
+            <TranstionMenu />
             </div>
         </section>
        
