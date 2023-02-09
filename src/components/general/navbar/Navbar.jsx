@@ -8,7 +8,7 @@ import {setOpenMenu} from '../../../store/openMenuSlice';
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import TranslationMenu from '../transaltionMenu/TranslationMenu';
-
+import { HashLink } from 'react-router-hash-link';
 
 
 const Navbars = () => {
@@ -38,16 +38,16 @@ const Navbars = () => {
                     <Col className="col-5 d-none d-lg-block">
                         <div className="d-flex">
                             <div>
-                                
-                                <a role="button" href="#about-us" className="px-3 fw-bold text-black navbar-bold">{t("navbar-about-us")}</a>
-                                
+                            <HashLink to={"/#about-us"}>
+                                <span role="button"  className="px-3 fw-bold text-black navbar-bold">{t("navbar-about-us")}</span>
+                            </HashLink>
                             </div>
                             <Link to={"/teachers"} className='nav-link'>
                                 <div role="button" className="mx-4 fw-bold navbar-bold">{t("navbar-our-Teachers")}</div>
                             </Link>
-                            <div>
-                                <a role="button" href="#start-conversition" className="navbar-bold text-black fw-bold">{t("navbar-contact-us")}</a> 
-                            </div>
+                            <HashLink to={"/#start-conversition"}>
+                                 <span role="button" className="navbar-bold text-black fw-bold">{t("navbar-contact-us")}</span>
+                            </HashLink>
                         </div>
                     </Col>
 
