@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {setOpenMenu} from '../../../store/openMenuSlice';
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import TranslationMenu from '../transaltionMenu/TranslationMenu';
 
 
 
@@ -21,8 +22,11 @@ const Navbars = () => {
 
     return (
        <section className="p-3 navbar-section">
-            <Container fluid>
+            <Container >
                 <Row className='align-items-center'>
+
+
+
                     <Col className="col-6 col-lg-2">
                         <Link to={"/"} className='nav-link'>
                         <div>
@@ -30,6 +34,7 @@ const Navbars = () => {
                         </div>
                         </Link>
                     </Col>
+
                     <Col className="col-5 d-none d-lg-block">
                         <div className="d-flex">
                             <div>
@@ -43,18 +48,20 @@ const Navbars = () => {
                             </div>
                         </div>
                     </Col>
+
+
                     <Col className="col-5 d-none d-lg-block">
                         <div className="d-flex justify-content-end align-items-center">
                             {localStorage.getItem("heighNewbrainsToken") ? (<>
                                 <img src={user.image ? "https://newbrainshigh.com/profileImages/users/" + user.image:"/imgs/navbar/user.webp"} alt='user'
                                     style={{width:"55px", height:"55px"}}
-                                    className="rounded-circle"
+                                    className="rounded-circle mx-4"
                                     role="button"
                                     onClick={() => navigate('/subjects')}
                                 />
                             </>) : (
                                 <>
-                                    <div className="d-flex align-items-center">
+                                    <div className="d-flex align-items-center mx-4">
                                     <Link to={"/login"} className='nav-link'>
                                         <div role="button" className="mx-5 fw-bold navbar-log-in text-blue p-2 px-4 btn-reduis">{t("navbar-log-in")}</div>
                                     </Link>
@@ -64,8 +71,14 @@ const Navbars = () => {
                                     </div>  
                                 </>
                             )}  
+                            <div>  <TranslationMenu />  </div>
                         </div>
                     </Col>
+
+
+
+
+
                     <Col className="col-6 d-lg-none">
 
 
@@ -142,6 +155,10 @@ const Navbars = () => {
                     
                     
                     </Col>
+
+
+
+
                 </Row>
             </Container>
        </section>
