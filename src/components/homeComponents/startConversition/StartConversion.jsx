@@ -91,10 +91,7 @@ const StartConversion = () => {
             <li>
               <h4>( {t('home-conv-title-2')} )</h4>
               <p>{t('home-conv-para-2')}</p>
-            </li>
-            <li>
-              <h4>( {t('home-conv-title-3')} )</h4>
-              <p>{t('home-conv-para-3')}</p>
+              <p>01553043622</p>
             </li>
           </ul>
           <form data-aos='fade-up' onSubmit={(e) =>submitData(e)}>
