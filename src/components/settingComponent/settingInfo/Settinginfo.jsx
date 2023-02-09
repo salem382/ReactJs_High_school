@@ -26,22 +26,36 @@ const Settinginfo = () => {
   const { t } = useTranslation();
 
   const dispatch = useDispatch();
-  let formData = new FormData(); 
 
   const { user } = useSelector((state) => state.currentUser);
   const [fileUrl, setFileUrl] = useState();
+  
+  const [image, setImage] = useState('');
+  const [userData, setUserData] = useState({
+    name:"",
+    phone:"",
+    parent_email:"",
+    parent_phone:"",
+    state:"",
+    city:""
+  });
 
   const [isPost, setIsPost] = useState(false);
   const [errArr, setErrArr] = useState({});
   const [msg, setMsg] = useState();
   
   const postData = (e) => {
-    formData.append(e.target.name, e.target.value); 
+    // formData.append(e.target.name, e.target.value); 
+    let usr = {...userData};
+    usr[e.target.name] = e.target.value;
+    setUserData({...usr})
   };
 
   const postDataForFile = async (e) => {
-    formData.append("image", e.target.files[0]); 
+    setImage(e.target.files[0]);
     setFileUrl(URL.createObjectURL(e.target.files[0]));
+
+    // formData.append("image"); 
   };
 
   const clearData = () => {
@@ -59,6 +73,17 @@ const Settinginfo = () => {
 
 
   const getData = async () => {
+
+    let formData = new FormData(); 
+    formData.append("name", userData.name);
+    formData.append("phone", userData.phone);
+    formData.append("parent_phone", userData.parent_phone);
+    formData.append("parent_email", userData.parent_email);
+    formData.append("city", userData.city);
+    formData.append("state", userData.state);
+    formData.append("image", image);
+
+
     setIsPost(true);
 
     try {
@@ -77,7 +102,9 @@ const Settinginfo = () => {
       setErrArr({});
       clearData();
       setMsg("success");
+      console.log (data);
     } catch (error) {
+      console.log (error);
       setIsPost(false);
       setErrArr({...JSON.parse(error.response.data)});
     }
