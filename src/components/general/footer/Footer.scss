@@ -4,6 +4,13 @@
   margin-top: 4vw;
   font-size: 0.65rem;
   position: relative;
+  .policies-item {
+    font-size: 14px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   .footer-title {
     font-style: normal;
     font-weight: 700;
@@ -46,10 +53,5 @@
       background-position: bottom !important;
     }
   }
-  .termsAndConditions {
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  
 }

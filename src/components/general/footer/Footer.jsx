@@ -26,9 +26,6 @@ const Footer = () => {
               <img src={require('../../../assets/imgs/footer/MasterCard.png')} alt='Master Card' />
               <img src={require('../../../assets/imgs/footer/visa.png')} alt='Visa' />
             </div>
-            <div style={{ zIndex: 99}} className='termsAndConditions'>
-              <Link to={'/terms'}><span className='text-primary'>{t("terms-heading")}</span></Link>
-            </div>
           </div>
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t('footer-col-1-title')}</h3>
@@ -45,11 +42,11 @@ const Footer = () => {
             <a href='./'>{t('footer-col-2-item-1')}</a>
           </div>
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
-            <h3 className='footer-title'>{t('footer-col-2-title')}</h3>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
+            <h3 className='footer-title'>{t("footer-policies")}</h3>
+            <Link to={'/terms'}><span className='policies-item' >{t("terms-heading")}</span></Link>
+            <Link to={''}><span className='policies-item' >{t("privacy-heading")}</span></Link>
+            <Link to={''}><span className='policies-item' >{t("Refund-heading")}</span></Link>
+            <Link to={''}><span className='policies-item' >{t("Cancellation-heading")}</span></Link>
           </div>
           <span className='copyrights'>
             © 2023 NewBrains Website. Built using React.

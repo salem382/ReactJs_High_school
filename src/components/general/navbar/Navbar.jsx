@@ -61,12 +61,12 @@ const Navbars = () => {
                                 />
                             </>) : (
                                 <>
-                                    <div className="d-flex align-items-center mx-4">
+                                    <div className="d-flex align-items-center">
                                     <Link to={"/login"} className='nav-link'>
-                                        <div role="button" className="mx-5 fw-bold navbar-log-in text-blue p-2 px-4 btn-reduis">{t("navbar-log-in")}</div>
+                                        <div role="button" className="fw-bold navbar-log-in text-blue p-2 px-4 btn-reduis">{t("navbar-log-in")}</div>
                                     </Link>
                                     <Link to={"/signup"}>
-                                        <div role="button" className="text-blue navbar-sign-up fw-bold border-blue p-2 px-4 btn-reduis">{t("navbar-sign-up")}</div>
+                                        <div role="button" className="text-blue navbar-sign-up fw-bold border-blue p-2 px-4 btn-reduis mx-4">{t("navbar-sign-up")}</div>
                                     </Link>
                                     </div>  
                                 </>
@@ -84,7 +84,7 @@ const Navbars = () => {
 
 
 
-                        <div  onClick={(e) => e.stopPropagation()} className='d-flex justify-content-end position-relative'>
+                        <div  onClick={(e) => e.stopPropagation()} className='d-flex justify-content-end position-relative align-items-center'>
                             {localStorage.getItem("heighNewbrainsToken") ? (<>
                                 <img src={user.image ?  "https://newbrainshigh.com/profileImages/users/" +user.image:"/imgs/navbar/user.webp"} alt='user'
                                     style={{width:"55px", height:"55px", cursor:"pointer"}}
@@ -96,7 +96,7 @@ const Navbars = () => {
                             </>)}
 
 
-                            <div className='position-absolute bg-white border py-3 rounded'
+                            <div className='position-absolute bg-white border py-3 rounded mx-4'
                                 style={{marginTop:localStorage.getItem("heighNewbrainsToken") && "30px",display:openMenu ? 'block':'none',top:"30px", zIndex:"99",  boxShadow:"0px 0px 3px rgba(0, 0, 0, 0.3)",
                                 width:"150px"
                             }}
@@ -147,7 +147,6 @@ const Navbars = () => {
                                         </Link>  
                                     </div>
                                 )}
-
 
 
                             </div>
