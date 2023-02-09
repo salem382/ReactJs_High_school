@@ -49,7 +49,7 @@ const Footer = () => {
             <Link to={''}><span className='policies-item' >{t("Cancellation-heading")}</span></Link>
           </div>
           <span className='copyrights'>
-            © 2023 NewBrains Website. Built using React.
+            © 2023 NewBrains Website. Built  By Ahmed Salem +201143871233
           </span>
         </div>
       </Container>
