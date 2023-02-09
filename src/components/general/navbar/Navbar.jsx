@@ -114,19 +114,25 @@ const Navbars = () => {
 
 
                                  <p>
-                                    <a onClick={() => dispatch(setOpenMenu(false))}
+                                 <HashLink onClick={() => dispatch(setOpenMenu(false))} to={"/#about-us"}>
+                                    <span 
                                      href="#about-us" role="button" 
                                      className='nav-item fw-bold py-2 text-center text-black d-block'>
                                         {t("navbar-about-us")}
-                                    </a>
+                                    </span>
+                                 </HashLink>
                                  </p>
                                 <Link to={"/teachers"} className='nav-link' onClick={() => dispatch(setOpenMenu(false))}>
                                     <p  role="button" className='nav-item  fw-bold py-2 text-center text-ramad '>{t("navbar-our-Teachers")}</p>
                                 </Link>
                                 <p>
-                                   <a  onClick={() => dispatch(setOpenMenu(false))}  
-                                   role="button" href="#start-conversition" 
-                                   className='nav-item  fw-bold py-2 text-center pb-2 text-black d-block'>{t("navbar-contact-us")}</a>
+                                <HashLink onClick={() => dispatch(setOpenMenu(false))} to={"/#start-conversition"}>
+                                    <span 
+                                        role="button"  
+                                        className='nav-item  fw-bold py-2 text-center pb-2 text-black d-block'>
+                                            {t("navbar-contact-us")}
+                                    </span>
+                                </HashLink>
                                 </p>
 
 
