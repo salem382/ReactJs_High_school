@@ -23,8 +23,12 @@ const TeacherComponent = ({teachers}) => {
             <img src={"https://newbrainshigh.com/profileImages/teachers/"+ teacher.image} alt={teacher.name} 
               style={{height:"200px"}}
             />
-            <h4 className="name">{teacher.name}</h4>
-            <span className="school">High School</span>
+            <div className="teacher-info">
+              <h4 className="name">{teacher.name}</h4>
+              <p className="school">High School</p>
+              <p className="school">{teacher.subject.name}</p>
+              <p className="school">{teacher.subject.section}</p>
+            </div>
             {/* <button className="action">{t("ourTeachers-card-button")}</button> */}
           </div>)}
           </>

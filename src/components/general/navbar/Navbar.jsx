@@ -38,7 +38,9 @@ const Navbars = () => {
                     <Col className="col-5 d-none d-lg-block">
                         <div className="d-flex">
                             <div>
+                                
                                 <a role="button" href="#about-us" className="px-3 fw-bold text-black navbar-bold">{t("navbar-about-us")}</a>
+                                
                             </div>
                             <Link to={"/teachers"} className='nav-link'>
                                 <div role="button" className="mx-4 fw-bold navbar-bold">{t("navbar-our-Teachers")}</div>
