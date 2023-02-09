@@ -95,12 +95,6 @@ const StartConversion = () => {
             <li>
               <h4>( {t('home-conv-title-3')} )</h4>
               <p>{t('home-conv-para-3')}</p>
-              <div className='icons'>
-                <img src='./imgs/home/SocialIconsINS.png' alt='' />
-                <img src='./imgs/home/SocialIconsWB.png' alt='' />
-                <img src='./imgs/home/SocialIconsTW.png' alt='' />
-                <img src='./imgs/home/SocialIconsYT.png' alt='' />
-              </div>
             </li>
           </ul>
           <form data-aos='fade-up' onSubmit={(e) =>submitData(e)}>
