@@ -65,7 +65,7 @@ const Navbars = () => {
                                 <>
                                     <div className="d-flex align-items-center">
                                     <Link to={"/login"} className='nav-link'>
-                                        <div role="button" className="fw-bold navbar-log-in text-blue p-2 px-4 btn-reduis">{t("navbar-log-in")}</div>
+                                        <div role="button" className="fw-bold navbar-log-in text-blue p-2 btn-reduis">{t("navbar-log-in")}</div>
                                     </Link>
                                     <Link to={"/signup"}>
                                         <div role="button" className="text-blue navbar-sign-up fw-bold border-blue p-2 px-4 btn-reduis mx-4">{t("navbar-sign-up")}</div>
