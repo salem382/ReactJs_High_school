@@ -2,7 +2,8 @@ import { Container } from 'react-bootstrap';
 import './Footer.scss';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-
+import {faFacebook, faInstagram, faLinkedin, faYoutube} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -16,9 +17,10 @@ const Footer = () => {
             <img src='./imgs/navbar/logo.png' alt='logo' />
             <p className='logo-para'>{t('footer-logo-para')}</p>
             <div className='footer-links'>
-              <img src='./imgs/home/SocialIconsFB.png' alt='FB' />
-              <img src='./imgs/home/SocialIconsINS.png' alt='INS' />
-              <img src='./imgs/home/SocialIconsTW.png' alt='TW' />
+              <a href='https://www.facebook.com/Newbrains2023'><FontAwesomeIcon className='fs-3 icon' icon={faFacebook}/></a>
+              <a href='https://www.instagram.com/newbrains2023'><FontAwesomeIcon className='fs-3 icon' icon={faInstagram}/></a>
+              <a href='https://www.linkedin.com/in/new-brains'><FontAwesomeIcon className='fs-3 icon' icon={faLinkedin}/></a>
+              <a href='https://www.youtube.com/@newbrains2023'><FontAwesomeIcon className='fs-3 icon' icon={faYoutube}/></a>
             </div>
             <div className='footer-payments'>
               <img src={require('../../../assets/imgs/footer/MasterCard.png')} alt='Master Card' />

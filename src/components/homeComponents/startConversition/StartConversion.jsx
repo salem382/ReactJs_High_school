@@ -144,7 +144,6 @@ const StartConversion = () => {
             </button>
           </form>
         </div>
-        {<p className='fw-bold  border ms-5 d-block' style={{color:"#080"}}>Success</p>}
       </div>
     </Container>
   );
