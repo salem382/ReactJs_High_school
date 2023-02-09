@@ -25,9 +25,9 @@ const TeacherComponent = ({teachers}) => {
             />
             <div className="teacher-info">
               <h4 className="name">{teacher.name}</h4>
-              <p className="school">High School</p>
-              <p className="school">{teacher.subject.name}</p>
-              <p className="school">{teacher.subject.section}</p>
+              <p className="school fw-bold">High School</p> <br/>
+              <p className="school fw-bold">{teacher.subject.name} teacher</p> <br/>
+              <p className="school fw-bold">{teacher.subject.section}</p>
             </div>
             {/* <button className="action">{t("ourTeachers-card-button")}</button> */}
           </div>)}
