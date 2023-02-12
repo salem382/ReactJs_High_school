@@ -162,6 +162,46 @@
   "term-10": "You agree to use the site for your own personal educational purposes without sharing the site with others. If you do not comply with this term your membership will be terminated at once",
   "term-11": "You have read ,understood and agreed to all terms and conditions and you will agree to any modifications or additions to the terms and conditions. Failure to do so ,you will not be able to join our site.",
   "term-12": "No refunds will be issued.",
-  "teacher":"teacher"
+  "teacher":"teacher",
+
+
+
+  "return-policies" : "One two three for educational services  and all the websites that it runs , don’t  refund any paid money for the courses that you may have used or registered for, however you may use the site for time you had paid for ",
+  "return-head" : "Return and Refund Policy",
+
+
+  "privacy-head" : "Privacy Policy",
+  "privacy-p":"This Privacy Policy sets out the policy of One two three for educational services with all the websites it runs with respect to the way we obtain, use, and disclose information about you through website We understand and appreciate that you are concerned about privacy, particularly in relation to the use and disclosure of personal information. We are committed to providing a high level of privacy in relation to all personal information that is collected by us. The purpose of this Privacy Policy is to tell you what kind of information we may gather about you when you visit our site, how we may use that information, whether we disclose it to anyone, and the choices you have regarding how we will use your personal information, and your ability to correct this information. Our website allows you to choose what kind and how much information you provide to us and to control how we use whatever information you give us. Our goal is to provide you with a satisfying experience while allowing you to control your privacy and to give you the means to voice any questions or concerns you may have",
+  "privacy-head1":"YOUR CONSENT",
+  "privacy-p1":"You consent to your personal information being used in accordance with the privacy policy by visiting our website, by entering a competition on our website, by purchasing our products on the website and/or by providing us with your personal information on the website.",
+  "privacy-head2":"COLLECTION OF INFORMATION",
+  "privacy-p2":"Information is collected from you primarily to make it easier and more rewarding for you to use our website and services. Depending on the service you are accessing, you could be asked to provide information such as your name, email address or information about what you like and do not like. It is entirely your choice whether to respond to these questions or not",
+  "privacy-head3":"USE OF PERSONAL INFORMATION",
+  "privacy-p3":"One two three for educational services with all the websites it runs will use the personal information you have chosen to provide us for the purpose for which you provided it. One two three for educational services will not use it for any other purpose without your consent. We might on occasions, use this information to notify you of any important changes to our site or any special promotions that may be of interest to you. On each email or communication that we send you, we will include simple instructions on how you can immediately unsubscribe from our mailing list. You can opt out from receiving such material at any time by emailing our privacy manager and asking to be removed from the mailing list. Any information we may collect from you will be treated with strict confidentiality",
+  "privacy-head4":"DISCLOSURE ",
+  "privacy-p4":"There will be occasions where it will be necessary for One two three for educational services to disclose your personal information to third parties. One two  three for educational  services may be required to disclose your personal information to third parties to provide the products or services you have requested, for example, if you purchase products online, one two three for educational services will need to disclose your personal information to third parties to bill and deliver your products. However, the disclosure will only be made where it is necessary to fulfill the purpose for which you disclosed your personal information. Otherwise, then stated above, we do not disclose personal information that you may give us, such as your name, address, email address or telephone number, to any organization or person outside BOUNCE, unless you have authorized us to do so, or unless we are requested to do so by a law enforcement agency in relation to a suspected breach of any law. ",
+  "privacy-head5":"NO SALE OF PERSONAL INFORMATION",
+  "privacy-p5":"Under no circumstances will One two three for educational services sell or receive payment for licensing or disclosing your personal information. ",
+  "privacy-head6":"PASSWORDS",
+  "privacy-p6":"Ultimately, you are solely responsible for maintaining the secrecy of your passwords and/or any personal information. Be responsible whenever you are online. Credit Cards We do not collect or store credit card information on our database or server. This information is managed through a secure credit card payment facility, all information sent to the processing bank is managed with the latest security software, systems, and processes (SSL). ",
+  "privacy-head7":"SECURITY ",
+  "privacy-p7":"One two three for educational services operates secure data networks that are designed to protect your privacy and security. One two three for educational services  has a Security Policy that explains how we protect your privacy and personal information. Please note that our website does not provide systems for secure transmission of personal information across the internet, except where otherwise specifically stated. You should be aware that there are inherent risks in transmitting personal information via the internet and that we accept no responsibility for personal information provided via unsecured websites. We will not be held liable for loss or damage arising from unauthorized access to your personal information or a breach of this policy whether such access or breach was caused by our negligent or willful act or omission or that of our employees or agents. ",
+  "privacy-head8":"ACCESS AND CORRECTION ",
+  "privacy-p8":"The security of your information is important to us. The information we have collected about you cannot be seen or modified by anyone else. We make all reasonable efforts to ensure that information is stored securely both in electronic and physical form. You may access your information at any time. If you would like to know what information we hold about you, please contact us. If you discover that there is an error or information is missing, please notify us and we will try to correct or update the information as soon as possible. We will try to ensure that all information we collect, use, or disclose about you is accurate, complete and up to date.",
+
+
+
+
+
+  "refund-head" : "Cancelation & refund policy",
+  "refund-head1":"1. GENERAL",
+  "refund-p1":"One Two three for educational services is committed to providing exceptional service in a timely manner Unfortunately,when customer cancels without giving enough notice, it prevents another customer from being served. No shows and late cancellation have an impact on service quality while punishing customers who may show up earlier. For these reasons. [COMPANY NAME] has implemented a cancellation policy that will be strictly observed.",
+  "refund-head2":"2. FULL PAYMENT",
+  "refund-p2":"Your registration is complete when we receive your full payment. Payments can be online or in person. We do not reserve [SPECIFY] without payment.An online confirmation email will be sent to you at the time of registration and payment. This email serves as confirmation of your registration.",
+  "refund-head3":"3. CANCELLATION REQUEST",
+  "refund-p3":"Cancellation requests may be submitted by phone, email, online or in person. Please note that refunds will be processed in the original form of payment. If you have any questions or concerns about our cancellation policy, please contact us at (PHONE NUMBER]",
+  "refund-head4":"4. REFUND POLICY",
+  "refund-p4":"The refund request must not exceed 14 days from the date of payment. If the refund request is accepted the full paid amount will be recovered to your account in 14 working days"
+  
 }
 

@@ -44,9 +44,9 @@ const Footer = () => {
           <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t("footer-policies")}</h3>
             <Link to={'/terms'}><span className='policies-item' >{t("terms-heading")}</span></Link>
-            <Link to={''}><span className='policies-item' >{t("privacy-heading")}</span></Link>
-            <Link to={''}><span className='policies-item' >{t("Refund-heading")}</span></Link>
-            <Link to={''}><span className='policies-item' >{t("Cancellation-heading")}</span></Link>
+            <Link to={'/privacypolicies'}><span className='policies-item' >{t("privacy-heading")}</span></Link>
+            <Link to={'/returnpolicies'}><span className='policies-item' >{t("Refund-heading")}</span></Link>
+            <Link to={'/CancilationPolicy'}><span className='policies-item' >{t("Cancellation-heading")}</span></Link>
           </div>
           <span className='copyrights'>
             © 2023 NewBrains Website. Built  By Ahmed Salem +201143871233
