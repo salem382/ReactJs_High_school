@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { useRef } from 'react';
 import BtnReload from '../../general/btnReload/BtnReload';
+import {toast} from 'react-toastify' ;
 
 
 const StartConversion = () => {
@@ -24,7 +25,6 @@ const StartConversion = () => {
   const phoneInput = useRef();
   const messageInput = useRef();
 
-  const [msg, setMsg] = useState ("");
   const [isPost, setIsPost] = useState (false);
   const [userData, setUserData] = useState({
       name:"",
@@ -61,7 +61,7 @@ const StartConversion = () => {
           })
           clearData();
           setIsPost(false);
-          setMsg("Message Sent")
+          toast.success(`Message Sent`,{position: 'bottom-left'});
       }
       catch (error) {
           setIsPost(false);
@@ -135,7 +135,6 @@ const StartConversion = () => {
             </button>
           </form>
         </div>
-        <p className='mt-3 success-message fw-bold'>{msg}</p>
       </div>
     </Container>
   );

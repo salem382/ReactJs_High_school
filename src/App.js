@@ -18,6 +18,8 @@ import { setCurrentLang } from './store/currentLangSlice';
 import { getUser } from './store/currentUser';
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
 import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
@@ -57,6 +59,7 @@ function App() {
   return (
     <div className='App' onClick={() => dispatch(setOpenMenu(false))}>
       <BrowserRouter>
+      <ToastContainer/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/lessons/:id' element={<ProtectedRoute><Lessons /></ProtectedRoute>} />

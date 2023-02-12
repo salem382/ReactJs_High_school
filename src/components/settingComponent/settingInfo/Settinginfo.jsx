@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import LoadingBtn from '../../general/btnReload/BtnReload';
 import {getUser} from '../../../store/currentUser';
 import { useRef } from 'react';
-
+import {toast} from 'react-toastify' ;
 
 
 const Settinginfo = () => {
@@ -42,7 +42,6 @@ const Settinginfo = () => {
 
   const [isPost, setIsPost] = useState(false);
   const [errArr, setErrArr] = useState({});
-  const [msg, setMsg] = useState();
   
   const postData = (e) => {
     // formData.append(e.target.name, e.target.value); 
@@ -101,7 +100,7 @@ const Settinginfo = () => {
       setIsPost(false);
       setErrArr({});
       clearData();
-      setMsg("success");
+      toast.success(`profile updated`,{position: 'bottom-left'});
       console.log (data);
     } catch (error) {
       console.log (error);
@@ -231,7 +230,6 @@ const Settinginfo = () => {
                   {isPost ? <LoadingBtn /> : <span>{t('profile-password-form-button-save')}</span>}
                 </button>
               </div>
-              <p style={{color:"#080", width:"240px"}} className='fw-bold ms-auto text-start mt-2 pb-4'>{msg}</p>
             </Col>
           </Row>
         </form>
