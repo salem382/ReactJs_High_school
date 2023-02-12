@@ -24,7 +24,7 @@ const StartConversion = () => {
   const phoneInput = useRef();
   const messageInput = useRef();
 
-  const [msg, setMsg] = useState (false);
+  const [msg, setMsg] = useState ("");
   const [isPost, setIsPost] = useState (false);
   const [userData, setUserData] = useState({
       name:"",
@@ -61,7 +61,7 @@ const StartConversion = () => {
           })
           clearData();
           setIsPost(false);
-          setMsg("Success")
+          setMsg("Message Sent")
       }
       catch (error) {
           setIsPost(false);
@@ -135,6 +135,7 @@ const StartConversion = () => {
             </button>
           </form>
         </div>
+        <p className='mt-3 success-message fw-bold'>{msg}</p>
       </div>
     </Container>
   );
