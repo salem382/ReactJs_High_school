@@ -86,4 +86,10 @@
     background: #ccc;
 
   }
+  .end {
+    input {
+      pointer-events: none;
+    }
+  }
+  
 }

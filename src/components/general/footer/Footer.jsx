@@ -11,6 +11,18 @@ const Footer = () => {
   
   return (
     <div className='footer'>
+
+
+      {/*
+      
+      "footer-feature1":"A complete and simplified explanation of all lessons and curricula",
+  "footer-feature2":"Our teachers are the elite in teaching the curriculum in a creative way",
+  "footer-feature3":"Continuous reviews on each lesson and unit to remind our students of the most important points of the curriculum",
+  "footer-feature4":"Electronic tests to measure the level of achievement of the student himself"
+  
+      
+      
+      */}
       <Container>
         <div className='row g-3'>
           <div className='col-6 col-md-6 col-lg-3 d-flex  align-items-start flex-column gap-4 '>

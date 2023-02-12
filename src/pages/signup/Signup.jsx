@@ -14,7 +14,7 @@ const Signup = () => {
       <SignTopPart />
       <div className="signWapper">
         <h1> {t("sign-up-form-header")}</h1>
-        <SocialSign />
+        {/* <SocialSign /> */}
         <SignUpForm />
         <div className="option">
           {t("sign-up-form-paragraph")}

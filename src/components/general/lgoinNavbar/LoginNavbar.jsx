@@ -45,7 +45,7 @@ const LoginNavbar = () => {
                     </Col>
                     <Col className="col-9 col-lg-3">
                          <div className='d-flex align-items-center justify-content-end'>
-                             <FontAwesomeIcon icon={faBell} className='mx-5 fs-4'/>
+                             {/* <FontAwesomeIcon icon={faBell} className='mx-5 fs-4'/> */}
                              <Link to="/" className='mav-link'>
                                 <img 
                                     src='/imgs/navbar/logo.png' alt='user'

@@ -92,14 +92,14 @@
   "home-hero-para-2": "Right now. Right here.",
   "home-hero-join": "Join for Free",
   "home-hero-sign": "Log In",
-  "home-info-title": "Lorem ipsum dolor amet, consectetur",
-  "home-info-para": "Lorem ipsum dolor sit amet, consectetur dipiscing elit eius mod tempor incididunt ut",
+  "home-info-title": "Studying is easier using your phone",
+  "home-info-para": "You suffer from hard effort in studying, and your time is wasted between private lessons and transportation. We made it easy for you to study for the complete curriculum in a simplified and concise way. To get the desired results, we will be with you everywhere 24 hours a day",
   "home-info-feature-1-title": "Quiz after the lesson",
-  "home-info-feature-1-para": "Lorem ipsum dolor sit amet",
+  "home-info-feature-1-para": "Electronic tests to measure the level of achievement of the student himself.",
   "home-info-feature-2-title": "Many Teachers",
-  "home-info-feature-2-para": "Lorem ipsum dolor sit amet",
+  "home-info-feature-2-para": "Our teachers are the elite in teaching the curriculum in a creative way",
   "home-info-feature-3-title": "Enjoy learning",
-  "home-info-feature-3-para": "Lorem ipsum dolor sit amet",
+  "home-info-feature-3-para": "Continuous reviews on each lesson and unit to remind our students of the most important points of the curriculum.",
   "home-history-title": "Our History",
   "home-history-para": "We are an educational platform that aims to fully explain and simplify all curriculums of different schools into  very easy subjects using the newest methods of presentation and and E learning .Moreover we focus predominantly on revisions on all individual subjects, chapters and the whole curriculums with all kinds of   questions especially MCQ. Questions are hand picked and  derived from public curriculums, recent exams of all states and whole country .This will help our beloved students to obtain excellent grades without any financia",
   "home-conv-title-main": "Let’s Start a Conversation  ",
@@ -201,7 +201,15 @@
   "refund-head3":"3. CANCELLATION REQUEST",
   "refund-p3":"Cancellation requests may be submitted by phone, email, online or in person. Please note that refunds will be processed in the original form of payment. If you have any questions or concerns about our cancellation policy, please contact us at (PHONE NUMBER]",
   "refund-head4":"4. REFUND POLICY",
-  "refund-p4":"The refund request must not exceed 14 days from the date of payment. If the refund request is accepted the full paid amount will be recovered to your account in 14 working days"
+  "refund-p4":"The refund request must not exceed 14 days from the date of payment. If the refund request is accepted the full paid amount will be recovered to your account in 14 working days",
+
+
+
+  
+  "footer-feature1":"A complete and simplified explanation of all lessons and curricula",
+  "footer-feature2":"Our teachers are the elite in teaching the curriculum in a creative way",
+  "footer-feature3":"Continuous reviews on each lesson and unit to remind our students of the most important points of the curriculum",
+  "footer-feature4":"Electronic tests to measure the level of achievement of the student himself"
   
 }
 

@@ -8,6 +8,7 @@ import {setIsEnd, inCreaseTotalSubmited} from '../../store/showResultSlice';
 import {setTotalGrade} from '../../store/showResultSlice';
 
 
+
 const Quiz = () => {
 
 
@@ -29,6 +30,7 @@ const Quiz = () => {
 
   const handelSubmit = (e) => {
       e.preventDefault();
+      e.target.classList.add("end");
       if (e.target.getAttribute("data-correct-ans") == e.target.getAttribute("data-choice")) {
           let quetsionGrade = e.target.getAttribute("data-grade");
           dispatch(setTotalGrade(Number(quetsionGrade)));

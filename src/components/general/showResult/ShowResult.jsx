@@ -38,12 +38,7 @@ const ShowResult = () => {
 
 
     useEffect(() => {
-        if (totalGrade > 0) {
-            sendData();
-        }
-        else {
-            setDone(false);
-        }
+        sendData();
     },[])
 
 

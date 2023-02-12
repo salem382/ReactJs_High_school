@@ -13,7 +13,7 @@ const Login = () => {
       <SignTopPart />
       <div className="signWapper">
         <h1> {t("log-in-form-header")}</h1>
-        <SocialSign />
+        {/* <SocialSign /> */}
         <LoginForm />
         <div className="option">
           {t("log-in-form-paragraph")}
