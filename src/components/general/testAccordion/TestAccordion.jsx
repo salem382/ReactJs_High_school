@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import './testAccordion.css';
 import {setCurrentQuiz} from '../../../store/quizSlice';
-import {setIsEnd,defaultTotalSubmited} from '../../../store/showResultSlice';
+import {setIsEnd,defaultTotalSubmited, defaultTotalGrade} from '../../../store/showResultSlice';
 import { useEffect } from 'react';
 
 
@@ -18,6 +18,7 @@ const TestAccordion = () => {
         dispatch(setCurrentQuiz(e.target.getAttribute("data-quizindx")));
         dispatch(setIsEnd(false));
         dispatch(defaultTotalSubmited());
+        dispatch(defaultTotalGrade());
     }
 
 

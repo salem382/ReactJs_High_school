@@ -2,7 +2,8 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     isEnd : false,
-    totalSubmited:1
+    totalSubmited:1,
+    totalGrade:0
 }
 
 const showResult = createSlice({
@@ -17,9 +18,16 @@ const showResult = createSlice({
         },
         defaultTotalSubmited : (state) => {
             state.totalSubmited = 1;
+        },
+        setTotalGrade : (state, action) => {
+            state.totalGrade = state.totalGrade + action.payload;
+        },
+        defaultTotalGrade : (state, action) => {
+            state.totalGrade = 0;
         }
     }
 })
 
 export default showResult.reducer;
-export const {setIsEnd, inCreaseTotalSubmited, defaultTotalSubmited} = showResult.actions;
+export const {setIsEnd, inCreaseTotalSubmited,
+     defaultTotalSubmited, setTotalGrade, defaultTotalGrade} = showResult.actions;

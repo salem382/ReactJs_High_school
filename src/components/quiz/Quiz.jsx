@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ShowResult from '../general/showResult/ShowResult';
 import { useRef } from 'react';
 import {setIsEnd, inCreaseTotalSubmited} from '../../store/showResultSlice';
-
+import {setTotalGrade} from '../../store/showResultSlice';
 
 
 const Quiz = () => {
@@ -16,7 +16,7 @@ const Quiz = () => {
   const {isEnd, totalSubmited} = useSelector(state => state.End);
 
   const {currentQuiz} = useSelector(state => state.quiz);
-  const [totalGrad, setTotalGrade] = useState(0);
+
   const {t} = useTranslation();
 
   const [totalQuestions, setTotalQuestions] = useState(0);;
@@ -31,7 +31,7 @@ const Quiz = () => {
       e.preventDefault();
       if (e.target.getAttribute("data-correct-ans") == e.target.getAttribute("data-choice")) {
           let quetsionGrade = e.target.getAttribute("data-grade");
-          setTotalGrade(state => state + Number(quetsionGrade));
+          dispatch(setTotalGrade(Number(quetsionGrade)));
       }
       dispatch(inCreaseTotalSubmited());
 
@@ -114,7 +114,7 @@ const Quiz = () => {
               </form>
 
       )}
-    {isEnd && <div ref={quizRef}>{<ShowResult totalGrad= {totalGrad} />}</div>}
+    {isEnd && <div ref={quizRef}>{<ShowResult/>}</div>}
     </div>
   );
 };

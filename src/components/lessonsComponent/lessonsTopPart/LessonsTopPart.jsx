@@ -6,6 +6,7 @@ import { useLocation, useParams } from "react-router-dom";
 
 const LessonsTopPart = () => {
 
+
     const params = useParams ();
     const location = useLocation();
     const {lang} = useSelector(state => state.currentLang)
@@ -25,7 +26,7 @@ const LessonsTopPart = () => {
 
     return (
         <div className='d-flex d-none d-sm-flex  mx-5 mb-4 align-items-center justify-content-between'
-            style={{width:location.pathname == `/test/${params.id}`?"500px" : "300px",color:"#F44580"}}
+            style={{width:location.pathname == `/test/${params.id}`?"380px" : "300px",color:"#F44580"}}
         >
             <FontAwesomeIcon className='fs-5' icon={faNoteSticky}/>
             <p>{subject ? subject:localStorage.getItem("subject")}</p>

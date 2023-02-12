@@ -3,11 +3,12 @@ import './showResult.scss'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const ShowResult = ({totalGrad}) => {
+const ShowResult = () => {
 
 
     const {currentQuiz} = useSelector(state => state.quiz);
     const {user} = useSelector(state => state.currentUser);
+    const {totalGrade} = useSelector(state => state.End);
     const [done, setDone] = useState(true);
 
 
@@ -20,15 +21,13 @@ const ShowResult = ({totalGrad}) => {
                     exam_id:currentQuiz.id, 
                     user_id:user.id,
                     total_grade: currentQuiz.total_grad,
-                    correct_questions_grade:totalGrad
+                    correct_questions_grade:totalGrade
                     },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,
                 }
             }
             );
-
-            console.log (data);
             
         }
         catch (error) {
@@ -39,8 +38,7 @@ const ShowResult = ({totalGrad}) => {
 
 
     useEffect(() => {
-        if (totalGrad > 0) {
-
+        if (totalGrade > 0) {
             sendData();
         }
         else {
@@ -63,7 +61,7 @@ const ShowResult = ({totalGrad}) => {
                         <div className="check-shadow"></div>
                     </div>
                     <div className="text fs-4">your score is
-                    <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrad}</span></div>
+                    <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrade}</span></div>
                 </div>  
             </>) :<p className='text-danger fs-4 w-50 m-auto py-4'>Your rating must be higher than one</p> }
         </>
