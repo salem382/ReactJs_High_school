@@ -53,5 +53,11 @@
       background-position: bottom !important;
     }
   }
+  .about-link {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   
 }

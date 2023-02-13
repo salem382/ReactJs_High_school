@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {faFacebook, faInstagram, faLinkedin, faYoutube} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { HashLink } from 'react-router-hash-link';
+
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -25,7 +28,7 @@ const Footer = () => {
       */}
       <Container>
         <div className='row g-3'>
-          <div className='col-6 col-md-6 col-lg-3 d-flex  align-items-start flex-column gap-4 '>
+          <div className='col-6 col-md-6 col-lg-4 d-flex  align-items-start flex-column gap-4 '>
             <img src='./imgs/navbar/logo.png' alt='logo' />
             <p className='logo-para'>{t('footer-logo-para')}</p>
             <div className='footer-links'>
@@ -39,21 +42,21 @@ const Footer = () => {
               <img src={require('../../../assets/imgs/footer/visa.png')} alt='Visa' />
             </div>
           </div>
-          <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
+          <div className='col-6 col-md-6 col-lg-4 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t('footer-col-1-title')}</h3>
-            <a href='./'>{t('footer-col-1-item-1')}</a>
-            <a href='./'>{t('footer-col-1-item-1')}</a>
-            <a href='./'>{t('footer-col-1-item-1')}</a>
-            <a href='./'>{t('footer-col-1-item-1')}</a>
+           <HashLink to={'/#about-us'}><span className='about-link'>About us</span></HashLink>
+           <HashLink to={'/#start-conversition'}><span className='about-link'>Start Conversion</span></HashLink>
+           <HashLink to={'/#Home-info'}><span className='about-link'>Features</span></HashLink>
+           <Link to={'/teachers'}><span className='about-link'>Our Teachers</span></Link>
           </div>
-          <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
+          {/* <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t('footer-col-2-title')}</h3>
+             <a href='./'>{t('footer-col-2-item-1')}</a>
             <a href='./'>{t('footer-col-2-item-1')}</a>
             <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-          </div>
-          <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
+            <a href='./'>{t('footer-col-2-item-1')}</a> 
+          </div> */}
+          <div className='col-12  col-lg-4 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t("footer-policies")}</h3>
             <Link to={'/terms'}><span className='policies-item' >{t("terms-heading")}</span></Link>
             <Link to={'/privacypolicies'}><span className='policies-item' >{t("privacy-heading")}</span></Link>

@@ -15,7 +15,7 @@ const Homeinfo = () => {
   }, []);
   return (
     <Container>
-      <div className='info'>
+      <div className='info' id='Home-info'>
         <div className='info__img'>
           <img data-aos='fade-up' src='./imgs/home/people.png' alt='' />
         </div>
