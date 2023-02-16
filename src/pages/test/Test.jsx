@@ -38,14 +38,14 @@ const Test = () => {
                 minHeight: '100vh',
             }}
         >
-            {isLoading ? <PageReload/> : <>
-                <LoginNavbar />
+            <LoginNavbar />
                 <Sidebar />
                 <Wrapper>
+                {isLoading ? <div className="fs-bold fs-5 mx-4">No Quizzess yet !</div> : <>
                     <LessonsTopPart />
                     <Quiz />
-                </Wrapper>
-            </>}
+                </>}
+            </Wrapper>
         </section>
     )
 }

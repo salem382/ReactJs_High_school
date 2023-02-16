@@ -1,9 +1,8 @@
 
-import { faBars, faMagnifyingGlass, faEllipsis } from '@fortawesome/free-solid-svg-icons'
+import { faBars} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation} from "react-i18next";
 import {Container, Row, Col } from "react-bootstrap";
-import {faBell} from '@fortawesome/free-regular-svg-icons';
 import {setOpenSidebar} from '../../../store/sidebarRouteSlice';
 import './loginNavbar.scss';
 import { useDispatch } from 'react-redux';
@@ -13,8 +12,6 @@ const LoginNavbar = () => {
 
 
     const dispatch = useDispatch();
-    const {t} = useTranslation ();
-
 
     return (
         <section className='p-3 mb-3'> 

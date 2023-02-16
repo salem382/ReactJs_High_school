@@ -7,7 +7,7 @@ const BtnReload = () => {
     return (
         <>
              <span className="spinner-border spinner-border-sm mx-3" role="status" aria-hidden="true"></span>
-                {lang == "en" ? "Loading ... " :"تحميل ..." } 
+                {lang === "en" ? "Loading ... " :"تحميل ..." } 
         </>
     )
 }

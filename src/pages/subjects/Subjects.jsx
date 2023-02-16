@@ -19,6 +19,7 @@ const Subjects = () => {
   const token = localStorage.getItem("heighNewbrainsToken");
 
   const [subjects, setSubjects] = useState([]);
+  const [isOk , setIsOk] = useState(true);
 
   const dataFetch = async () => {
     try {
@@ -30,7 +31,14 @@ const Subjects = () => {
           },
         }
       );
-      setSubjects([...data.subjects])
+      if (data.subjects.length > 0) {
+        setSubjects([...data.subjects])
+        setIsOk(true);
+      }
+      else {
+        setIsOk(false);
+      }
+
     }
     catch (error) {
       console.log (error)
@@ -53,10 +61,10 @@ const Subjects = () => {
         minHeight: '100vh',
       }}
     >
-      {subjects.length > 0 ? (
+      <LoginNavbar />
+      <Sidebar />
+      {subjects.length > 0  && isOk? (
         <>
-          <LoginNavbar />
-          <Sidebar />
           <Wrapper>
             <Container className='px-5'>
               <Row className='g-4'>
@@ -71,7 +79,12 @@ const Subjects = () => {
           </Wrapper>
         </>  
          
-      ) : <>
+      ) :!isOk && subjects.length === 0 ? (
+        <div className='w-50 m-auto fs-3 fw-bold'>
+            <p>No Subjects Found !</p>
+        </div>
+      )
+      : <>
         <PageReload />
       </>}
       

@@ -7,7 +7,7 @@ import './ActiveVideo.scss';
 const ActiveVideo = () => {
 
 
-  const {activeVideo, isLoading} = useSelector(state => state.units);
+  const {activeVideo} = useSelector(state => state.units);
 
  
   return (
@@ -20,7 +20,7 @@ const ActiveVideo = () => {
         playing = {false}
         url={`https://newbrainshigh.com/lessons/videos/${activeVideo.video}`}
       />
-    </div> : "loading..."}
+    </div> : "not found"}
     </>
      
   );

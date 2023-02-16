@@ -30,7 +30,7 @@ const Navbars = () => {
                     <Col className="col-6 col-lg-2">
                         <Link to={"/"} className='nav-link'>
                         <div>
-                             <img src="/imgs/navbar/logo.png"/>  
+                             <img src="/imgs/navbar/logo.png" alt='logo'/>  
                         </div>
                         </Link>
                     </Col>

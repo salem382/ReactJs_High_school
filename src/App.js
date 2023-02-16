@@ -9,7 +9,7 @@ import Signup from './pages/signup/Signup';
 import Subjects from './pages/subjects/Subjects';
 import Teachers from './pages/teachers/Teachers';
 import Test from './pages/test/Test';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { setOpenSidebar, setScreenSize } from './store/sidebarRouteSlice';
 import { setOpenMenu } from './store/openMenuSlice';
@@ -54,7 +54,7 @@ function App() {
     document.getElementById('html').lang = currentLang;
     dispatch(setCurrentLang(currentLang));
     dispatch(getUser());
-  }, []);
+  }, [dispatch, currentLang]);
 
 
   

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import './showResult.scss'
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 
 const ShowResult = () => {
 
@@ -9,13 +9,12 @@ const ShowResult = () => {
     const {currentQuiz} = useSelector(state => state.quiz);
     const {user} = useSelector(state => state.currentUser);
     const {totalGrade} = useSelector(state => state.End);
-    const [done, setDone] = useState(true);
 
 
     const sendData = async() => {
         try {
   
-            const {data} = await axios.get(`https://newbrainshigh.com/api/auth/quizResult`,{
+           await axios.get(`https://newbrainshigh.com/api/auth/quizResult`,{
   
                 params: {
                     exam_id:currentQuiz.id, 
@@ -45,7 +44,7 @@ const ShowResult = () => {
     return (
 
         <>
-            {done ? (<>
+            
                 <div className="main-container">
                     <div className="check-container">
                         <div className="check-background">
@@ -58,7 +57,7 @@ const ShowResult = () => {
                     <div className="text fs-4">your score is
                     <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrade}</span></div>
                 </div>  
-            </>) :<p className='text-danger fs-4 w-50 m-auto py-4'>Your rating must be higher than one</p> }
+    
         </>
     )
 }

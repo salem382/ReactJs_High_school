@@ -33,8 +33,6 @@ const Sidebar = () => {
     const handleLogout = async () => {
 
         let token = localStorage.getItem("heighNewbrainsToken");
-        localStorage.removeItem("heighNewbrainsToken");
-        navigate("/")
         try {
             const {data} = await axios.post('https://newbrainshigh.com/api/auth/userLogout',null, {
                 headers: {
@@ -45,6 +43,8 @@ const Sidebar = () => {
         }catch (error) {
             console.log (error);
         }
+        localStorage.removeItem("heighNewbrainsToken");
+        navigate("/")
     }
 
     return (

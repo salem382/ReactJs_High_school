@@ -27,6 +27,8 @@ const LoginForm = () => {
       setUserData({...usr})
   }
 
+  
+
   const getData = async() => {
       setIsPost(true);
       try {
@@ -37,7 +39,7 @@ const LoginForm = () => {
           }
           );
 
-
+          localStorage.removeItem("heighNewbrainsToken");
           localStorage.setItem("heighNewbrainsToken", data.access_token);
           navigate("/subjects");
           dispatch(getUser());
