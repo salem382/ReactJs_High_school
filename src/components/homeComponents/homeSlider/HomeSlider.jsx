@@ -23,7 +23,8 @@ const Homeslider = () => {
         <p className='banner__para'>
           {t('home-hero-para-1')} <br></br> {t('home-hero-para-2')}
         </p>
-        <div className='action'>
+        {localStorage.getItem("heighNewbrainsToken")  ? "" : (
+          <div className='action'>
           <button className='btn-solid'>
             <Link to={'/signup'} className='nav-link'>
               {t('home-hero-join')}
@@ -35,6 +36,7 @@ const Homeslider = () => {
               </Link>
           </button>
         </div>
+        )}
       </Container>
     </div>
   );
