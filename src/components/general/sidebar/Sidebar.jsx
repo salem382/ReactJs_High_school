@@ -124,12 +124,6 @@ const Sidebar = () => {
                             </NavLink>
                         </li>
 
-                        <li role={"button"} className="d-flex align-items-center text-gray2 mb-4">
-                            <span className="mx-2">
-                                <FontAwesomeIcon icon={faCircleInfo}/>
-                            </span>
-                            <p>{t("side-bar-more")}</p>
-                        </li>
                         <li role={"button"} className="d-flex align-items-center text-gray2">
                             <span className="mx-2">
                                 <FontAwesomeIcon icon={faRightFromBracket}/>
