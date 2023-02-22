@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ShowResult from '../general/showResult/ShowResult';
 import { useRef } from 'react';
-import {setIsEnd, inCreaseTotalSubmited, defaultTotalGrade} from '../../store/showResultSlice';
+import {setIsEnd, inCreaseTotalSubmited, defaultTotalGrade, defaultTotalSubmited, setTotalQuestions} from '../../store/showResultSlice';
 import {setTotalGrade} from '../../store/showResultSlice';
 
 
@@ -12,19 +12,15 @@ import {setTotalGrade} from '../../store/showResultSlice';
 const Quiz = () => {
 
 
-
   let quizRef = useRef();
   const dispatch = useDispatch();
   const {isEnd, totalSubmited} = useSelector(state => state.End);
 
-  const {currentQuiz} = useSelector(state => state.quiz);
+  const {currentQuiz, totalQuestions} = useSelector(state => state.quiz);
 
   const {t} = useTranslation();
 
-  const [totalQuestions, setTotalQuestions] = useState(0);;
-
-
-
+  
   const handleChange = (e) => {
     e.target.parentElement.parentElement.parentElement.setAttribute("data-choice", e.target.getAttribute("data-val"));
   };
@@ -36,28 +32,32 @@ const Quiz = () => {
           let quetsionGrade = e.target.getAttribute("data-grade");
           dispatch(setTotalGrade(Number(quetsionGrade)));
       }
-      dispatch(inCreaseTotalSubmited());
 
-      if (totalQuestions == totalSubmited ) {
-          dispatch(setIsEnd(true));
-      }
+      if (totalQuestions === totalSubmited ) {
+        dispatch(setIsEnd(true));
+      }  
   }
 
 
   useEffect(() => {
-    currentQuiz.questions && setTotalQuestions(currentQuiz.questions.length);
+    // currentQuiz.questions && dispatch(setTotalQuestions(currentQuiz.questions.length));
     return () => {
       dispatch(defaultTotalGrade());
+      dispatch(defaultTotalSubmited());
     }
   },[])
-
+ 
   useEffect(() => {
     if (isEnd) {
       quizRef.current?.scrollIntoView({ behavior: "smooth" })
     }
   },[isEnd])
 
- 
+  const handleBtnClick = (e) => {
+    dispatch(inCreaseTotalSubmited());
+    e.target.classList.add('stop-click')
+  }
+
 
   return (
     <div className='quiz'>
@@ -116,7 +116,7 @@ const Quiz = () => {
                 </div>
 
 
-                <button onClick={(e) =>e.target.classList.add('stop-click') } className='success-button my-1'>{t("submit-btn")}</button>
+                <button onClick={(e) => handleBtnClick(e)} className='success-button my-1'>{t("submit-btn")}</button>
               </form>
 
       )}

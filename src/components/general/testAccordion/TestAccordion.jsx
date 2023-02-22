@@ -2,8 +2,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import './testAccordion.css';
 import {setCurrentQuiz} from '../../../store/quizSlice';
-import {setIsEnd,defaultTotalSubmited, defaultTotalGrade} from '../../../store/showResultSlice';
-import { useEffect } from 'react';
+import {setIsEnd,defaultTotalSubmited, defaultTotalGrade, setTotalQuestions} from '../../../store/showResultSlice';
+
 
 
 
@@ -12,7 +12,7 @@ const TestAccordion = () => {
     const dispatch = useDispatch();
 
     const {activeVideo} = useSelector(state => state.units);
-    const {quizess, curentQuizIndx} = useSelector(state => state.quiz);
+    const {quizess, curentQuizIndx, currentQuiz} = useSelector(state => state.quiz);
 
     const handleClick = (e) => {
         dispatch(setCurrentQuiz(e.target.getAttribute("data-quizindx")));
@@ -31,7 +31,6 @@ const TestAccordion = () => {
                         <Accordion.Body>
                             <ul className='list-unstyled p-0 ul-item'>
                                 {quizess.map((quiz, quizIndx) => <li key={quiz.id}
-                                style={{color:quizIndx == curentQuizIndx ? "#00c8d5" : ""}}
                                  data-quizindx={quizIndx}
                                  onClick={(e)=>handleClick(e)}
                                  >{quiz.title}</li>)}

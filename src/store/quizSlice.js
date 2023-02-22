@@ -29,18 +29,18 @@ const quizessSlice = createSlice({
         quizess:[],
         isLoading: false,
         error:null,
-        curentQuizIndx :0,
-        currentQuiz:{}
+        currentQuiz:{},
+        totalQuestions:0
     },
     reducers:{
         setCurrentQuiz: (state, action) => {
            state.currentQuiz = {...state.quizess[action.payload]};
-           state.curentQuizIndx = action.payload;
            let total_grad = 0;
             state.currentQuiz.questions.forEach((question) => {
                 total_grad += question.question_grade;
             })
             state.currentQuiz.total_grad = total_grad;
+            state.totalQuestions = state.currentQuiz.questions.length;
         }
     },
     extraReducers: (builder) => {
@@ -58,6 +58,7 @@ const quizessSlice = createSlice({
                     total_grad += question.question_grade;
                 })
                 state.currentQuiz.total_grad = total_grad;
+                state.totalQuestions = state.currentQuiz.questions.length;
             })
             .addCase(getUQuizess.rejected, (state, action) => {
                 state.isLoading = false;
