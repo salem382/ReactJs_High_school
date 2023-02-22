@@ -22,21 +22,21 @@ export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
 const currentUser = createSlice({
     name:'user',
     initialState:{user:{}, isLoading: false, error:null},
-    extraReducers:{
-    [getUser.pending]:(state, action)=> {
-        state.isLoading = true;
-        state.error = null;
-    },
-    [getUser.fulfilled]:(state, action)=> {
-        state.isLoading = false;
-        state.user = {...action.payload.user};
-    },
-    [getUser.rejected]:(state, action)=> {
-        state.isLoading = false;
-        state.error = action.payload;
-    },
-    
-    }
+    extraReducers: (builder) => {
+        builder
+          .addCase(getUser.pending, (state, action) => {
+            state.isLoading = true;
+            state.error = null;
+          })
+          .addCase(getUser.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.user = { ...action.payload.user };
+          })
+          .addCase(getUser.rejected, (state, action) => {
+            state.isLoading = false;
+            state.error = action.payload;
+          });
+      },
 }) 
 
 export default currentUser.reducer;
