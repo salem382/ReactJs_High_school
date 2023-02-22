@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ShowResult from '../general/showResult/ShowResult';
 import { useRef } from 'react';
-import {setIsEnd, inCreaseTotalSubmited} from '../../store/showResultSlice';
+import {setIsEnd, inCreaseTotalSubmited, defaultTotalGrade} from '../../store/showResultSlice';
 import {setTotalGrade} from '../../store/showResultSlice';
 
 
 
 const Quiz = () => {
+
 
 
   let quizRef = useRef();
@@ -45,6 +46,9 @@ const Quiz = () => {
 
   useEffect(() => {
     currentQuiz.questions && setTotalQuestions(currentQuiz.questions.length);
+    return () => {
+      dispatch(defaultTotalGrade());
+    }
   },[])
 
   useEffect(() => {

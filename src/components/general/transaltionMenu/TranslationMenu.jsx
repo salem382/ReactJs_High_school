@@ -34,7 +34,6 @@ const TranslationMenu = () => {
 
     return (
        <div>
-       
           <Dropdown className="transalte-drop-down">
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 <FontAwesomeIcon className="ms-1" icon={faGlobe}/>
