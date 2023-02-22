@@ -152,7 +152,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='name'
-                  placeholder={user.name ? user.name : t(
+                  placeholder={user.name ? `${t('profile-personal-information-form-first-name')} :  ${user.name}` : t(
                     'profile-personal-information-form-first-name'
                   )}
                   type='text'
@@ -166,7 +166,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='phone'
-                  placeholder={user.phone ? user.phone : t('profile-personal-information-form-phone')}
+                  placeholder={user.phone ? ` ${t('profile-personal-information-form-phone')} : ${user.phone}` : t('profile-personal-information-form-phone')}
                   className='me-1 me-md-0'
                   type='number'
                   ref={Phone}
@@ -179,7 +179,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_email'
-                  placeholder={user.parent_email ? user.parent_email :  t('parent_email')}
+                  placeholder={user.parent_email ?  `${t('parent_email')} : ${user.parent_email}` :  t('parent_email')}
                   type='email'
                   ref={Parent_email}
                 />
@@ -191,7 +191,9 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_phone'
-                  placeholder={user.parent_phone ? user.parent_phone : t(
+                  placeholder={user.parent_phone ?   `${t(
+                    'profile-personal-information-form-parent-phone'
+                  )} : ${user.parent_phone}` : t(
                     'profile-personal-information-form-parent-phone'
                   )}
                   type='number'
@@ -206,7 +208,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='state'
-                  placeholder={user.state ? user.state :  t('profile-personal-information-form-state')}
+                  placeholder={user.state ?  ` ${ t('profile-personal-information-form-state')}  : ${user.state}` :  t('profile-personal-information-form-state')}
                   type='text'
                   ref={state}
                 />
@@ -218,7 +220,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='city'
-                  placeholder={user.city ? user.city : t('profile-personal-information-form-city')}
+                  placeholder={user.city ? `${t('profile-personal-information-form-city')} : ${user.city}` : t('profile-personal-information-form-city')}
                   type='text'
                   ref={city}
                 />
