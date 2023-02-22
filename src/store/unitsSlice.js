@@ -57,26 +57,27 @@ const unitsSlice = createSlice({
             }
         }
     },
-    extraReducers:{
-    [getUnits.pending]:(state, action)=> {
-        state.isLoading = true;
-        state.error = null;
-    },
-    [getUnits.fulfilled]:(state, action)=> {
-        state.isLoading = false;
-        state.units= JSON.parse(JSON.stringify(action.payload.result));
-        state.currentUnitsLessons = [...state.units[0].lessons];
-        state.activeVideo = {...[...state.units[0].lessons][0]};
-        state.currentUnit = state.units[0].name;
-        state.activeVideoIndex == state.currentUnitsLessons.length - 1 ? state.noNext = true :state.noNext = false; 
-    },
-    [getUnits.rejected]:(state, action)=> {
-        state.isLoading = false;
-        state.error = action.payload;
-    }
-    
+    extraReducers: (builder) => {
+        builder
+            .addCase(getUnits.pending, (state, action) => {
+                state.isLoading = true;
+                state.error = null;
+            })
+            .addCase(getUnits.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.units= JSON.parse(JSON.stringify(action.payload.result));
+                state.currentUnitsLessons = [...state.units[0].lessons];
+                state.activeVideo = {...[...state.units[0].lessons][0]};
+                state.currentUnit = state.units[0].name;
+                state.activeVideoIndex == state.currentUnitsLessons.length - 1 ? state.noNext = true :state.noNext = false; 
+            })
+            .addCase(getUnits.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload;
+            });
     }
 }) 
 
 export default unitsSlice.reducer;
 export const {setCurrentLessons, setCurrentVideo, nextBtn} = unitsSlice.actions;
+

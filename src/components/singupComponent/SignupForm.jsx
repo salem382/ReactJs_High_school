@@ -93,9 +93,14 @@ const SignUpForm = () => {
         placeholder={t("sign-up-form-age")}
       />
       <div className='text-danger'style={{ fontSize:"14px"}}>{errArr.age && errArr.age[0]}</div>
-      <select  onChange={(e) => postData(e)}
-        className="inputBtn" name="gender" id="gender" required>
-        <option value="" disabled selected hidden>
+      <select
+        onChange={(e) => postData(e)}
+        className="inputBtn"
+        name="gender"
+        id="gender"
+        required
+        defaultValue="">
+        <option value="" disabled>
           {t("sign-up-form-gender")}
         </option>
         <option value="male">{t("sign-up-form-gender-male")}</option>
@@ -137,34 +142,35 @@ const SignUpForm = () => {
         className="inputBtn"
         placeholder={t("sign-up-form-city")}
       />
-      <div className='text-danger'style={{ fontSize:"14px"}}>{errArr.city && errArr.city[0]}</div>
-      <select onChange={(e) => postData(e)} className="inputBtn" name="section" id="section" required>
-        <option value="" disabled selected hidden>
-          {t("sign-up-form-section")}
-        </option>
-        <option value="Sciences">{t("sign-up-form-section-public")}</option>
-        <option value="Humanities">{t("sign-up-form-section-language")}</option>
-      </select>
-      <div className='text-danger'style={{ fontSize:"14px"}}>{errArr.section && errArr.section[0]}</div>
-      <select onChange={(e) => postData(e)}  className="inputBtn" name="grade" id="grade" required>
-        <option value="" disabled selected hidden>
-          {t("sign-up-form-grade")}
-        </option>
-        <option value="first">{t("sign-up-form-grade-first")}</option>
-        <option value="second">{t("sign-up-form-grade-second")}</option>
-        <option value="third">{t("sign-up-form-grade-third")}</option>
-      </select>
-      <div className='text-danger'style={{ fontSize:"14px"}}>{errArr.grade && errArr.grade[0]}</div>
-      <button type="submit" className="formBtn">
-      {isPost ? (
-                        <>
-                           <BtnReload />  
-                        </>
-                    ) : ( <span>
-                      {t("sign-up-form-button")}
-                    </span>)}
-      </button>
-      <p className='text-danger m-0' style={{fontSize:"14px"}}>{msg}</p>
+     <div className='text-danger' style={{ fontSize: "14px" }}>{errArr.city && errArr.city[0]}</div>
+<select onChange={(e) => postData(e)} className="inputBtn" name="section" id="section" required>
+  <option value="" disabled defaultValue>
+    {t("sign-up-form-section")}
+  </option>
+  <option value="Sciences">{t("sign-up-form-section-public")}</option>
+  <option value="Humanities">{t("sign-up-form-section-language")}</option>
+</select>
+<div className='text-danger' style={{ fontSize: "14px" }}>{errArr.section && errArr.section[0]}</div>
+<select onChange={(e) => postData(e)} className="inputBtn" name="grade" id="grade" required>
+  <option value="" disabled defaultValue>
+    {t("sign-up-form-grade")}
+  </option>
+  <option value="first">{t("sign-up-form-grade-first")}</option>
+  <option value="second">{t("sign-up-form-grade-second")}</option>
+  <option value="third">{t("sign-up-form-grade-third")}</option>
+</select>
+<div className='text-danger' style={{ fontSize: "14px" }}>{errArr.grade && errArr.grade[0]}</div>
+<button type="submit" className="formBtn">
+  {isPost ? (
+    <>
+      <BtnReload />
+    </>
+  ) : (<span>
+    {t("sign-up-form-button")}
+  </span>)}
+</button>
+<p className='text-danger m-0' style={{ fontSize: "14px" }}>{msg}</p>
+
     </form>
   );
 };

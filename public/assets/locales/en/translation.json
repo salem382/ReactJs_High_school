@@ -202,6 +202,9 @@
   "refund-p3":"Cancellation requests may be submitted by phone, email, online or in person. Please note that refunds will be processed in the original form of payment. If you have any questions or concerns about our cancellation policy, please contact us at (PHONE NUMBER]",
   "refund-head4":"4. REFUND POLICY",
   "refund-p4":"The refund request must not exceed 14 days from the date of payment. If the refund request is accepted the full paid amount will be recovered to your account in 14 working days",
+  "membership-head" : "Membership Fees",
+  "membership-p1": "1 ) To help all  high school students to benefit and enjoy all of our services ranging from full explanation of curriculums, plenty of review questions (and quizzes )and different kinds of all exams provided  by New Brains platform, we have introduced a reduced rate for joining us 500  Egyptian pounds as monthly membership (instead of 1000)  for third  year of high school and 300 Egyptian pounds as monthly membership for first and second year of high school",
+  "membership-p2": "2) To make it easy for our students, we have different methods for payments such as Visa, Master card, Miza ,Fawri and Vodafone cash",
 
 
 
@@ -209,7 +212,12 @@
   "footer-feature1":"A complete and simplified explanation of all lessons and curricula",
   "footer-feature2":"Our teachers are the elite in teaching the curriculum in a creative way",
   "footer-feature3":"Continuous reviews on each lesson and unit to remind our students of the most important points of the curriculum",
-  "footer-feature4":"Electronic tests to measure the level of achievement of the student himself"
+  "footer-feature4":"Electronic tests to measure the level of achievement of the student himself",
+  "footer-member" :"Membership",
+  "footer-conv" :"Start Conversion",
+  "footer-feat" :"Features",
+  "footer-teache" :"Our Teachers",
+  "social-moving" : "the quick fox jumps over the"
   
 }
 

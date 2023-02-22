@@ -18,32 +18,31 @@ const Subjects = () => {
 
   const token = localStorage.getItem("heighNewbrainsToken");
 
-  const [subjects, setSubjects] = useState([]);
-  const [isOk , setIsOk] = useState(true);
+  const [Subjects, setSubjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
+  
   const dataFetch = async () => {
+    setIsLoading(true);
+    setIsError(false);
     try {
       const {data} = await axios.get(
         "https://newbrainshigh.com/api/auth/getSubjects",
         {
           headers: {
-            Authorization: `Bearer ${token}`,
-          },
+            Authorization: `Bearer ${token}`
+          }
         }
       );
-      if (data.subjects.length > 0) {
-        setSubjects([...data.subjects])
-        setIsOk(true);
-      }
-      else {
-        setIsOk(false);
-      }
-
+      
+      setSubjects([...data.subjects])
     }
     catch (error) {
       console.log (error)
+      setIsError(true);
     }
-    
+    setIsLoading(false);
  
   };
 
@@ -63,31 +62,24 @@ const Subjects = () => {
     >
       <LoginNavbar />
       <Sidebar />
-      {subjects.length > 0  && isOk? (
-        <>
-          <Wrapper>
-            <Container className='px-5'>
-              <Row className='g-4'>
-                {subjects.map(element => <Col md={4} key={element.id}>
-                    <Link onClick={() => dispatch(setCurrentSubject(element.name))}  to={`/lessons/${element.id}`} className='nav-link'>
-                      <Subject subjectData = {element} />
-                    </Link>
-                  </Col>
-                )}
-              </Row>
-            </Container>
-          </Wrapper>
-        </>  
-         
-      ) :!isOk && subjects.length === 0 ? (
-        <div className='w-50 m-auto fs-3 fw-bold'>
-            <p>No Subjects Found !</p>
-        </div>
-      )
-      : <>
-        <PageReload />
-      </>}
-      
+      {isLoading ? <PageReload /> :isError?
+         <div className='text-danger fs-5 fw-bold my-4 w-50 m-auto'>Error occurred while fetching data</div> 
+         :Subjects.length === 0 ?<div className=' fs-5 fw-bold my-4 w-50 m-auto'>No Subjects found</div> : (
+          <>
+            <Wrapper>
+              <Container className='px-5'>
+                <Row className='g-4'>
+                  {Subjects.map(element => <Col md={4} key={element.id}>
+                      <Link onClick={() => dispatch(setCurrentSubject(element.name))}  to={`/lessons/${element.id}`} className='nav-link'>
+                        <Subject subjectData = {element} />
+                      </Link>
+                    </Col>
+                  )}
+                </Row>
+              </Container>
+            </Wrapper>
+          </>  
+         )}
       
     </div>
   );

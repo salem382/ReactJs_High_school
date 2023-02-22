@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { HashLink } from 'react-router-hash-link';
 
 
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -25,7 +26,7 @@ const Footer = () => {
         >
           <div className='col-6 col-md-6 col-lg-4 d-flex  align-items-start flex-column gap-4 '>
             <img src='./imgs/navbar/logo.png' alt='logo' />
-            <p className='logo-para'>{t('footer-logo-para')}</p>
+            <p className='logo-para'>{t('social-moving')}</p>
             <div className='footer-links'>
               <a href='https://www.facebook.com/Newbrains2023'><FontAwesomeIcon className='fs-3 icon' icon={faFacebook}/></a>
               <a href='https://www.instagram.com/newbrains2023'><FontAwesomeIcon className='fs-3 icon' icon={faInstagram}/></a>
@@ -39,18 +40,11 @@ const Footer = () => {
           </div>
           <div className='col-6 col-md-6 col-lg-4 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t('footer-col-1-title')}</h3>
-           <HashLink to={'/#about-us'}><span className='about-link'>About us</span></HashLink>
-           <HashLink to={'/#start-conversition'}><span className='about-link'>Start Conversion</span></HashLink>
-           <HashLink to={'/#Home-info'}><span className='about-link'>Features</span></HashLink>
-           <Link to={'/teachers'}><span className='about-link'>Our Teachers</span></Link>
+           <Link to={'/membership'}><span className='about-link'>{t("footer-member")}</span></Link>
+           <HashLink to={'/#start-conversition'}><span className='about-link'>{t("footer-conv")}</span></HashLink>
+           <HashLink to={'/#Home-info'}><span className='about-link'>{t("footer-feat")}</span></HashLink>
+           <Link to={'/teachers'}><span className='about-link'>{t("footer-teache")}</span></Link>
           </div>
-          {/* <div className='col-6 col-md-6 col-lg-3 d-flex align-items-center flex-column gap-4 '>
-            <h3 className='footer-title'>{t('footer-col-2-title')}</h3>
-             <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a>
-            <a href='./'>{t('footer-col-2-item-1')}</a> 
-          </div> */}
           <div className='col-12  col-lg-4 d-flex align-items-center flex-column gap-4 '>
             <h3 className='footer-title'>{t("footer-policies")}</h3>
             <Link to={'/terms'}><span className='policies-item' >{t("terms-heading")}</span></Link>

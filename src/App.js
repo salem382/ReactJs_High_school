@@ -23,6 +23,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import ReturnedPolicies from '../src/pages/returnedPolicies/ReturnedPolicies';
 import PrivacyPolicies from './pages/provacyPolicies/PrivacyPolicies';
 import CancilationPolicy from './pages/cancelationPolicy/CancilationPolicy';
+import Membership from './pages/memberShip/MemberShip';
 
 
 
@@ -77,11 +78,13 @@ function App() {
           <Route path='/returnpolicies' element={<ReturnedPolicies />} />
           <Route path='/privacypolicies' element={<PrivacyPolicies />} />
           <Route path='/CancilationPolicy' element={<CancilationPolicy />} />
+          <Route path='/membership' element={<Membership />} />
           <Route path='*' element={<div className='fs-1 text-center mt-5 text-danger'>Page Not Found 404!</div>} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;
