@@ -42,7 +42,7 @@ const SignUpForm = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.post('https://newbrainshigh.com/api/auth/userRegister',userData)
+          const {data} = await axios.post('https://newbrains-edu.com/api/auth/userRegister',userData)
           navigate('/login');
       }
       catch (error) {

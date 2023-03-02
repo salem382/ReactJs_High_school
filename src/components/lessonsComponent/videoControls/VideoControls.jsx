@@ -30,7 +30,7 @@ const VideoControls = () => {
       <div className='lesson-actions'>
         <div className='lesson-actions-group '>
           <button className='light-button  pdf'>
-            <a className='' href={"https://newbrainshigh.com/lessons/pdfs/" + activeVideo.pdf} target={'_blank'}>
+            <a className='' href={"https://newbrains-edu.com/lessons/pdfs/" + activeVideo.pdf} target={'_blank'}>
               {t('video-controls-pdf')}
             </a>
           </button>

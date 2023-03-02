@@ -8,7 +8,7 @@ async(unitId, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get (`https://newbrainshigh.com/api/auth/getUnits/${unitId}`,
+        const {data} = await axios.get (`https://newbrains-edu.com/api/auth/getUnits/${unitId}`,
         {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,

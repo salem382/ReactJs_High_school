@@ -20,7 +20,7 @@ const TeacherComponent = ({teachers}) => {
       <div className="teachersCards">
           <>
             {teachers.map((teacher) => <div key={teacher.id} className="teacher">
-            <img src={"https://newbrainshigh.com/profileImages/teachers/"+ teacher.image} alt={teacher.name} 
+            <img src={"https://newbrains-edu.com/profileImages/teachers/"+ teacher.image} alt={teacher.name} 
               style={{height:"200px"}}
             />
             <div className="teacher-info">

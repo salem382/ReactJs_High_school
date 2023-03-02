@@ -14,7 +14,7 @@ const ShowResult = () => {
     const sendData = async() => {
         try {
   
-           await axios.get(`https://newbrainshigh.com/api/auth/quizResult`,{
+           await axios.get(`https://newbrains-edu.com/api/auth/quizResult`,{
   
                 params: {
                     exam_id:currentQuiz.id, 

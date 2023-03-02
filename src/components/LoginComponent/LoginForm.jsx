@@ -32,8 +32,7 @@ const LoginForm = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-
-          const {data} = await axios.post(`https://newbrainshigh.com/api/auth/userLogin`,null,{
+          const {data} = await axios.post(`https://newbrains-edu.com/api/auth/userLogin`,null,{
 
               params: { email: userData.email, password: userData.password }
           }

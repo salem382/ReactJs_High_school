@@ -6,7 +6,7 @@ export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get('https://newbrainshigh.com/api/auth/userProfile', {
+        const {data} = await axios.get('https://newbrains-edu.com/api/auth/userProfile', {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem("heighNewbrainsToken")}`
             }

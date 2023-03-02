@@ -55,7 +55,7 @@ const Navbars = () => {
                     <Col className="col-5 d-none d-lg-block">
                         <div className="d-flex justify-content-end align-items-center">
                             {localStorage.getItem("heighNewbrainsToken") ? (<>
-                                <img src={user.image ? "https://newbrainshigh.com/profileImages/users/" + user.image:"/imgs/navbar/user.webp"} alt='user'
+                                <img src={user.image ? "https://newbrains-edu.com/profileImages/users/" + user.image:"/imgs/navbar/user.webp"} alt='user'
                                     style={{width:"55px", height:"55px"}}
                                     className="rounded-circle mx-4"
                                     role="button"
@@ -88,7 +88,7 @@ const Navbars = () => {
 
                         <div  onClick={(e) => e.stopPropagation()} className='d-flex justify-content-end position-relative align-items-center'>
                             {localStorage.getItem("heighNewbrainsToken") ? (<>
-                                <img src={user.image ?  "https://newbrainshigh.com/profileImages/users/" +user.image:"/imgs/navbar/user.webp"} alt='user'
+                                <img src={user.image ?  "https://newbrains-edu.com/profileImages/users/" +user.image:"/imgs/navbar/user.webp"} alt='user'
                                     style={{width:"55px", height:"55px", cursor:"pointer"}}
                                     className="rounded-circle"
                                     onClick={() =>dispatch(setOpenMenu(true))}

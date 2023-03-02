@@ -1,6 +1,5 @@
 import './settinginfo.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -69,7 +68,7 @@ const Settinginfo = () => {
   }
 
   useEffect(() => {
-    user.image ? setFileUrl("https://newbrainshigh.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
+    user.image ? setFileUrl("https://newbrains-edu.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
   },[user])
 
 
@@ -89,7 +88,7 @@ const Settinginfo = () => {
 
     try {
       const { data } = await axios.post(
-        'https://newbrainshigh.com/api/auth/userUpdateProfile',
+        'https://newbrains-edu.com/api/auth/userUpdateProfile',
         formData,
         {
           headers: {

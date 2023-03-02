@@ -18,7 +18,7 @@ const Portfolio = () => {
   const getData = async () => {
 
     try {
-        const {data} = await axios.get('https://newbrainshigh.com/api/auth/getQuizResult', {
+        const {data} = await axios.get('https://newbrains-edu.com/api/auth/getQuizResult', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem("heighNewbrainsToken")}`
           }

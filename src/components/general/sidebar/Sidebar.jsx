@@ -34,7 +34,7 @@ const Sidebar = () => {
 
         let token = localStorage.getItem("heighNewbrainsToken");
         try {
-            const {data} = await axios.post('https://newbrainshigh.com/api/auth/userLogout',null, {
+            const {data} = await axios.post('https://newbrains-edu.com/api/auth/userLogout',null, {
                 headers: {
                   'Authorization': `Bearer ${token}`
                 }

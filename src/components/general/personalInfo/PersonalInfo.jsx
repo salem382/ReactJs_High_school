@@ -10,7 +10,7 @@ const PersonalInfo = () => {
                 style={{width:"90%", borderRadius:"20px"}}  
             >
                 <Link to='/subjects'>
-                    <img src={user.image ? "https://newbrainshigh.com/profileImages/users/" + user.image:"/imgs/navbar/user.webp"} alt="user"
+                    <img src={user.image ? "https://newbrains-edu.com/profileImages/users/" + user.image:"/imgs/navbar/user.webp"} alt="user"
                     className="rounded-circle"
                     style={{width:"50px", height:"50px"}}
                     />

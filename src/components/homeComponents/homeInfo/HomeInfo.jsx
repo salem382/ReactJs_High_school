@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+
 const Homeinfo = () => {
   const { t } = useTranslation();
   useEffect(() => {

@@ -7,8 +7,8 @@ const Subject = ({subjectData}) => {
 
 
   const { name, teacher_name, teacher_image, teacher_id, id, image } = subjectData;
-  const teacherImageUrl = "https://newbrainshigh.com/profileImages/teachers/";
-  const SubjectImageUrl = "https://newbrainshigh.com/subjects/";
+  const teacherImageUrl = "https://newbrains-edu.com/profileImages/teachers/";
+  const SubjectImageUrl = "https://newbrains-edu.com/subjects/";
 
 
 

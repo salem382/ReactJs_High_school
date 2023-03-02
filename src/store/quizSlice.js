@@ -8,7 +8,7 @@ async(quizId, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get (`https://newbrainshigh.com/api/auth/getQuizesWeb/${quizId}`,
+        const {data} = await axios.get (`https://newbrains-edu.com/api/auth/getQuizesWeb/${quizId}`,
         {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,

@@ -11,6 +11,7 @@ import {toast} from 'react-toastify' ;
 
 
 const StartConversion = () => {
+  
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -51,7 +52,7 @@ const StartConversion = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.get(`https://newbrainshigh.com/api/contactUs?name=${userData.name}&message=${userData.message}&phone=${userData.phone}&email=${userData.email}`,null, {
+          const {data} = await axios.get(`https://newbrains-edu.com/api/contactUs?name=${userData.name}&message=${userData.message}&phone=${userData.phone}&email=${userData.email}`,null, {
             params:{
               name:userData.name,
               message:userData.message,

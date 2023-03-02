@@ -22,7 +22,7 @@ const Teachers = () => {
     setIsError(false);
 
     try {
-        const {data} = await axios.get ("https://newbrainshigh.com/api/getAllTeachers");
+        const {data} = await axios.get ("https://newbrains-edu.com/api/getAllTeachers");
         setTeachers([...data.result]);
     }
     catch (error) {

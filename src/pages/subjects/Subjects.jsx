@@ -28,7 +28,7 @@ const Subjects = () => {
     setIsError(false);
     try {
       const {data} = await axios.get(
-        "https://newbrainshigh.com/api/auth/getSubjects",
+        "https://newbrains-edu.com/api/auth/getSubjects",
         {
           headers: {
             Authorization: `Bearer ${token}`
