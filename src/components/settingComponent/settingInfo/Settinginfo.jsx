@@ -123,7 +123,7 @@ const Settinginfo = () => {
           <Row>
             <Col md={3}>
               <div
-                className='position-relative m-auto'
+                className='position-relative m-auto position-relative'
                 style={{ width: '150px', height: '150px' }}
               >
                 <img
@@ -141,8 +141,9 @@ const Settinginfo = () => {
                   type='file'
                   accept='image/png, image/jpeg'
                 />
-                <div className='text-danger pt-5' style={{ fontSize: '14px' }}>
-                  {errArr.image && errArr.image[0]}
+                <div className='text-danger pt-5 position-absolute'
+                 style={{ fontSize: '14px',bottom:"5px", left:"30px" }}>
+                  {errArr.image && "Imag is Required"}
                 </div>
               </div>
             </Col>

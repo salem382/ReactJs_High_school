@@ -20,7 +20,7 @@ const ShowResult = () => {
                     exam_id:currentQuiz.id, 
                     user_id:user.id,
                     total_grade: currentQuiz.total_grad,
-                    correct_questions_grade:totalGrade
+                    correct_questions_grade:totalGrade == 0 ? 1 : totalGrade
                     },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,
@@ -55,7 +55,7 @@ const ShowResult = () => {
                         <div className="check-shadow"></div>
                     </div>
                     <div className="text fs-4">your score is
-                    <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrade}</span></div>
+                    <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrade == 0 ? 1 : totalGrade}</span></div>
                 </div>  
     
         </>

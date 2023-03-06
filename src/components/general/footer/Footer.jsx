@@ -53,6 +53,7 @@ const Footer = () => {
             <Link to={'/CancilationPolicy'}><span className='policies-item' >{t("Cancellation-heading")}</span></Link>
           </div>
           <span className='copyrights'>
+            {t("footer-text")} <br/>
             © 2023 NewBrains Website. Built  By Ahmed Salem +201143871233
           </span>
         </div>

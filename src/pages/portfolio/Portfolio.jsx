@@ -24,8 +24,7 @@ const Portfolio = () => {
           }
       });
 
-      setAllGrade([...data[0]])
-      console.log(data[0])
+      setAllGrade([...data.result])
     }
     catch (error) {
 
@@ -56,7 +55,7 @@ const Portfolio = () => {
             <Col>
               <ul className='mt-5'>
                   {allGrade.map((item)=> <li key={item.id} className='my-3 list-styled'> 
-                      <span className='fw-bold fs-4'>{item.title} :</span> <span style={{color:"#080"}} className='fs-4'>{item.total_grade}</span> / <span style={{color:"#080"}} className='fs-4'>{item.correct_questions_grade}</span>
+                      <span className='fw-bold fs-4'>{item.quiz.title} :</span> <span style={{color:"#080"}} className='fs-4'>{item.total_grade}</span> / <span style={{color:"#080"}} className='fs-4'>{item.correct_questions_grade}</span>
                   </li>)}
               </ul>
             </Col>
