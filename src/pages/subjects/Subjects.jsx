@@ -21,8 +21,30 @@ const Subjects = () => {
   const [Subjects, setSubjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [message, setMessage] = useState('');
+  const [link, setLink] = useState('');
 
   
+  const payMethod = async (message) => {
+
+    setMessage(message)
+    try {
+      const {data} = await axios.post(
+        "https://newbrains-edu.com/api/auth/user_pay",null,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+      setLink(data.redirect_url)
+    }
+    catch (error) {
+      console.log (error)
+    }
+  }
+
+
   const dataFetch = async () => {
     setIsLoading(true);
     setIsError(false);
@@ -35,8 +57,8 @@ const Subjects = () => {
           }
         }
       );
-      
-      setSubjects([...data.subjects])
+      console.log();
+      data.message ? payMethod(data.message) : setSubjects([...data.subjects]);
     }
     catch (error) {
       console.log (error)
@@ -64,6 +86,12 @@ const Subjects = () => {
       <Sidebar />
       {isLoading ? <PageReload /> :isError?
          <div className='text-danger fs-5 fw-bold my-4 w-50 m-auto'>Error occurred while fetching data</div> 
+         :message ?(
+          <>
+            <p className='fs-5 fw-bold my-4 w-50 m-auto'style={{color:'#00C8D5'}}>{message}</p>
+            <a href={link} target='_blank' className='btn btn-primary d-block' style={{width:'150px', marginLeft:'350px'}}>Pay</a>
+          </>
+           )
          :Subjects.length === 0 ?<div className=' fs-5 fw-bold my-4 w-50 m-auto'>No Subjects found</div> : (
           <>
             <Wrapper>

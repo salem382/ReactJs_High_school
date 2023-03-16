@@ -122,11 +122,13 @@
   "footer-col-1-item-1": "Lorem Ipsum",
   "footer-col-2-title": "المميزات",
   "footer-col-2-item-1": "Lorem Ipsum",
+
   "footer-policies": "السياسات",
   "privacy-heading":"سياسات الخصوصية",
   "Refund-heading":"سياسات الاسترداد",
   "Cancellation-heading":"سياسات الالغاء",
   "footer-col-3-title": "اتصل بنا",
+  
   "footer-col-3-item-1": "Lorem Ipsum",
 
   "video-controls-pdf": "اعرض PDF",
@@ -232,7 +234,7 @@
   "footer-feat" :"المميزات",
   "footer-teache" :"مدرسينا",
   "social-moving" : "الذهاب الي مواقع التواصل الاجتماعي",
-  "footer-text" : "٨ شارع ٢٠٣ دجله المعادي"
+  "footer-text" : "عنوان الشركة : ٨ شارع ٢٠٣ دجله المعادي"
   
 
 }

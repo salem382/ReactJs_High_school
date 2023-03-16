@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
           <span className='copyrights'>
             {t("footer-text")} <br/>
-            © 2023 NewBrains Website. Built  By Ahmed Salem +201143871233
+            © 2023 NewBrains Website. Built  By Cloudy
           </span>
         </div>
       </Container>

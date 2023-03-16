@@ -121,10 +121,12 @@
   "footer-col-1-title": "About us",
   "footer-col-1-item-1": "Lorem Ipsum",
   "footer-col-2-title": "Features",
+
   "footer-policies": "Policies",
   "privacy-heading":"Privacy Policy",
   "Refund-heading":"Refund Policy",
   "Cancellation-heading":"Cancellation Policy",
+  
   "footer-col-2-item-1": "Lorem Ipsum",
   "footer-col-3-title": "Contact us",
   "footer-col-3-item-1": "Lorem Ipsum",
@@ -221,7 +223,7 @@
   "footer-feat" :"Features",
   "footer-teache" :"Our Teachers",
   "social-moving" : "the quick fox jumps over the",
-  "footer-text" : "8 street 203 Degla Maadi"
+  "footer-text" : "Company Adress : 8 street 203 Degla Maadi"
   
 }
 

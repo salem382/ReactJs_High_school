@@ -7,7 +7,6 @@ import BtnReload from "../general/btnReload/BtnReload";
 
 
 
-
 const SignUpForm = () => {
   const { t } = useTranslation();
 

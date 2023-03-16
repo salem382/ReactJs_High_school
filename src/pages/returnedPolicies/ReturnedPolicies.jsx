@@ -23,8 +23,6 @@ const ReturnPolicies = () => {
   
 
 
-
-
   return (
     <>
         <Navbars/>
