@@ -57,7 +57,7 @@ const Subjects = () => {
           }
         }
       );
-      console.log();
+      console.log (data)
       data.message ? payMethod(data.message) : setSubjects([...data.subjects]);
     }
     catch (error) {

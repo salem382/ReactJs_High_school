@@ -99,7 +99,7 @@ const SignUpForm = () => {
         id="gender"
         required
         defaultValue="">
-        <option value="" disabled>
+        <option value="" disabled hidden>
           {t("sign-up-form-gender")}
         </option>
         <option value="male">{t("sign-up-form-gender-male")}</option>
@@ -142,16 +142,16 @@ const SignUpForm = () => {
         placeholder={t("sign-up-form-city")}
       />
      <div className='text-danger' style={{ fontSize: "14px" }}>{errArr.city && errArr.city[0]}</div>
-<select onChange={(e) => postData(e)} className="inputBtn" name="section" id="section" required>
-  <option value="" disabled defaultValue>
+<select onChange={(e) => postData(e)} className="inputBtn" name="section" id="section" required defaultValue="">
+  <option value="" disabled hidden>
     {t("sign-up-form-section")}
   </option>
   <option value="Sciences">{t("sign-up-form-section-public")}</option>
   <option value="Humanities">{t("sign-up-form-section-language")}</option>
 </select>
 <div className='text-danger' style={{ fontSize: "14px" }}>{errArr.section && errArr.section[0]}</div>
-<select onChange={(e) => postData(e)} className="inputBtn" name="grade" id="grade" required>
-  <option value="" disabled defaultValue>
+<select onChange={(e) => postData(e)} className="inputBtn" name="grade" id="grade" required defaultValue="">
+  <option value="" disabled hidden>
     {t("sign-up-form-grade")}
   </option>
   <option value="first">{t("sign-up-form-grade-first")}</option>
