@@ -8,10 +8,10 @@ async(unitId, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get (`https://newbrains-edu.com/api/auth/getUnits/${unitId}`,
+        const {data} = await axios.get (`http://localhost:5000/unit/${unitId}`,
         {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,
+              token: `${localStorage.getItem("heighNewbrainsToken")}`,
             }
         })  
               
@@ -65,7 +65,7 @@ const unitsSlice = createSlice({
             })
             .addCase(getUnits.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.units= JSON.parse(JSON.stringify(action.payload.result));
+                state.units= JSON.parse(JSON.stringify(action.payload.units));
                 state.currentUnitsLessons = [...state.units[0].lessons];
                 state.activeVideo = {...[...state.units[0].lessons][0]};
                 state.currentUnit = state.units[0].name;

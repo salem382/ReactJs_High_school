@@ -18,7 +18,7 @@ const ActiveVideo = () => {
         height='50vh'
         controls = {true}
         playing = {false}
-        url={`https://newbrains-edu.com/lessons/videos/${activeVideo.video}`}
+        url={`http://localhost:5000/${activeVideo.video}`}
       />
     </div> : "not found"}
     </>

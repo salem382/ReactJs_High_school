@@ -17,21 +17,23 @@ const Teachers = () => {
   const [isError, setIsError] = useState(false);
 
   
+     
   const getAllTeachers = async () => {
     setIsLoading(true);
     setIsError(false);
 
-    try {
-        const {data} = await axios.get ("https://newbrains-edu.com/api/getAllTeachers");
-        setTeachers([...data.result]);
+    try {  
+        const {data} = await axios.get("http://localhost:5000/teacher");
+        setTeachers([...data.teachers]);
     }
     catch (error) {
-      console.log (error)
-      setIsError(true);
+    console.log (error)
+    setIsError(true);
+    console.log (error)
     }
     setIsLoading(false);
 
-  }
+    }
 
   useEffect (() => {
 

@@ -32,21 +32,16 @@ const LoginForm = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.post(`https://newbrains-edu.com/api/auth/userLogin`,null,{
-
-              params: { email: userData.email, password: userData.password }
-          }
-          );
-
-          localStorage.removeItem("heighNewbrainsToken");
-          localStorage.setItem("heighNewbrainsToken", data.access_token);
-          navigate("/subjects");
-          dispatch(getUser());
-          setIsPost(false);
+        const {data} = await axios.post(`http://localhost:5000/user/login`,userData);
+        localStorage.setItem("heighNewbrainsToken", data.token);
+        navigate("/subjects");
+        setIsPost(false);
+        dispatch(getUser());
       }
       catch (error) {
-          setIsPost(false);
-          error.response.data.message && setMsg(error.response.data.message);
+        setIsPost(false);
+        error.response.data.message && setMsg(error.response.data.message);
+        console.log (error);
       }
       
   }

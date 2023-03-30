@@ -68,7 +68,7 @@ const Settinginfo = () => {
   }
 
   useEffect(() => {
-    user.image ? setFileUrl("https://newbrains-edu.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
+    user.image ? setFileUrl("http://localhost:5000/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
   },[user])
 
 
@@ -82,17 +82,16 @@ const Settinginfo = () => {
     formData.append("city", userData.city);
     formData.append("state", userData.state);
     formData.append("image", image);
-
-
     setIsPost(true);
 
+
     try {
-      const { data } = await axios.post(
-        'https://newbrains-edu.com/api/auth/userUpdateProfile',
+      const { data } = await axios.put(
+        'http://localhost:5000/user',
         formData,
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem('heighNewbrainsToken')}`,
+            token: `${localStorage.getItem('newbrainsToken')}`,
             'content-type': 'multipart/form-data'
           }
         }

@@ -41,13 +41,13 @@ const SignUpForm = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.post('https://newbrains-edu.com/api/auth/userRegister',userData)
-          navigate('/login');
+        const {data} = await axios.post('http://localhost:5000/user/signup',userData)
+        navigate('/login');
       }
       catch (error) {
-          setIsPost(false);
-          error.response.data.message ?  setMsg("This Email is Already Registed use Another One"):
-          setErrArr({...JSON.parse(error.response.data)});
+        setIsPost(false);
+        console.log (error.response.data)
+        error.response.data.message  != 'success' && setMsg("This Email is Already Registed use Another One")
       }
   }
 

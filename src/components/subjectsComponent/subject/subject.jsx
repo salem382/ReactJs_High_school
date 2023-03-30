@@ -6,9 +6,8 @@ const Subject = ({subjectData}) => {
 
 
 
-  const { name, teacher_name, teacher_image, teacher_id, id, image } = subjectData;
-  const teacherImageUrl = "https://newbrains-edu.com/profileImages/teachers/";
-  const SubjectImageUrl = "https://newbrains-edu.com/subjects/";
+  const { name, teacherName, image } = subjectData;
+  const SubjectImageUrl = "http://localhost:5000/";
 
 
 
@@ -36,12 +35,8 @@ const Subject = ({subjectData}) => {
         </div>
       </div>
       <h4 className='name'>{name}</h4>
-      <div className='teacher-info'>
-      <img src={teacherImageUrl + teacher_image} alt={teacher_image}
-        style={{width:"50px", height:"50px"}}
-        className="rounded-circle"
-      />
-            <p>Mr. {teacher_name}</p>
+      <div className=''>
+          <p className='name mb-0 mt-2' style={{textTransform:'capitalize'}}>Teacher:{teacherName}</p>
       </div>
     </div>
   );

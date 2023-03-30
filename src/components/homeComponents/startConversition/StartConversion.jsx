@@ -20,7 +20,6 @@ const StartConversion = () => {
       once: false,
     });
   }, []);
-
   const nameInput = useRef();
   const emailInput = useRef();
   const phoneInput = useRef();
@@ -52,17 +51,10 @@ const StartConversion = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.get(`https://newbrains-edu.com/api/contactUs?name=${userData.name}&message=${userData.message}&phone=${userData.phone}&email=${userData.email}`,null, {
-            params:{
-              name:userData.name,
-              message:userData.message,
-              phone:userData.phone,
-              email:userData.email
-            }
-          })
+          const {data} = await axios.post(`http://localhost:5000/contact`, userData)
           clearData();
           setIsPost(false);
-          toast.success(`Message Sent`,{position: 'bottom-left'});
+          toast.success(`Message Sent`,{position: 'bottom-right'});
       }
       catch (error) {
           setIsPost(false);

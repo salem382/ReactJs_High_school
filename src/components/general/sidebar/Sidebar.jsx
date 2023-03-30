@@ -32,11 +32,10 @@ const Sidebar = () => {
   
     const handleLogout = async () => {
 
-        let token = localStorage.getItem("heighNewbrainsToken");
         try {
-            const {data} = await axios.post('https://newbrains-edu.com/api/auth/userLogout',null, {
+            const {data} = await axios.post('http://localhost:5000/user/logout',null, {
                 headers: {
-                  'Authorization': `Bearer ${token}`
+                  token: `${localStorage.getItem("heighNewbrainsToken")}`
                 }
             })
             

@@ -8,23 +8,25 @@ import CircularProgressSection from '../../components/accountComponent/circularP
 import { Container, Row, Col } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import AllGrade from '../../components/general/AllGrade/AllGrade';
 
 const Portfolio = () => {
 
-    const [allGrade, setAllGrade] = useState([]);
 
+    
+  const [allGrade, setAllGrade] = useState([]);
 
   const getData = async () => {
 
     try {
-        const {data} = await axios.get('https://newbrains-edu.com/api/auth/getQuizResult', {
+        const {data} = await axios.get('http://localhost:5000/result', {
           headers: {
-            'Authorization': `Bearer ${localStorage.getItem("heighNewbrainsToken")}`
+            token: `${localStorage.getItem("newbrainsToken")}`
           }
       });
 
-      setAllGrade([...data.result])
+      setAllGrade([...data.results])
+      console.log(data)
     }
     catch (error) {
 
@@ -35,6 +37,7 @@ const Portfolio = () => {
   useEffect(() => {
     getData();
   },[])
+
 
   return (
     <section
@@ -52,13 +55,11 @@ const Portfolio = () => {
             <Col className='col-12'>
               <GoodMorning />
             </Col>
-            <Col>
-              <ul className='mt-5'>
-                  {allGrade.map((item)=> <li key={item.id} className='my-3 list-styled'> 
-                      <span className='fw-bold fs-4'>{item.quiz.title} :</span> <span style={{color:"#080"}} className='fs-4'>{item.total_grade}</span> / <span style={{color:"#080"}} className='fs-4'>{item.correct_questions_grade}</span>
-                  </li>)}
-              </ul>
-            </Col>
+            
+            {allGrade.map((grade, indx) => <Col key={indx} className='col-6'> 
+                          <AllGrade  grade = {grade}/>
+                        </Col>)
+              }
           </Row>
         </Container>
         <div className='py-5'></div>

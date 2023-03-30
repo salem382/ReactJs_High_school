@@ -3,17 +3,16 @@ import axios from "axios";
 
 
 export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
-
-    const {rejectWithValue} = thunkAPI;
+  const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get('https://newbrains-edu.com/api/auth/userProfile', {
+        const {data} = await axios.get('http://localhost:5000/user', {
             headers: {
-              'Authorization': `Bearer ${localStorage.getItem("heighNewbrainsToken")}`
+              token: `${localStorage.getItem("newbrainsToken")}`
             }
         })
         return data;
-    }catch (error) {
-        return rejectWithValue(error.message);
+    } catch (error) {
+        return rejectWithValue(error.response.data.message);
     }
 })
 

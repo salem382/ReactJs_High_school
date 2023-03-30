@@ -8,10 +8,10 @@ async(quizId, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get (`https://newbrains-edu.com/api/auth/getQuizesWeb/${quizId}`,
+        const {data} = await axios.get (`http://localhost:5000/assignment/${quizId}`,
         {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("heighNewbrainsToken")}`,
+              token: `${localStorage.getItem("newbrainsToken")}`,
             }
         })  
               
@@ -30,16 +30,13 @@ const quizessSlice = createSlice({
         isLoading: false,
         error:null,
         currentQuiz:{},
+        currentQuizIndex:0,
         totalQuestions:0
     },
     reducers:{
         setCurrentQuiz: (state, action) => {
            state.currentQuiz = {...state.quizess[action.payload]};
-           let total_grad = 0;
-            state.currentQuiz.questions.forEach((question) => {
-                total_grad += question.question_grade;
-            })
-            state.currentQuiz.total_grad = total_grad;
+           state.currentQuizIndex = Number(action.payload);
             state.totalQuestions = state.currentQuiz.questions.length;
         }
     },
@@ -51,13 +48,8 @@ const quizessSlice = createSlice({
             })
             .addCase(getUQuizess.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.quizess = JSON.parse(JSON.stringify(action.payload.result));
+                state.quizess = JSON.parse(JSON.stringify(action.payload.quizes));
                 state.currentQuiz = {...state.quizess[0]};
-                let total_grad = 0;
-                state.currentQuiz.questions.forEach((question) => {
-                    total_grad += question.question_grade;
-                })
-                state.currentQuiz.total_grad = total_grad;
                 state.totalQuestions = state.currentQuiz.questions.length;
             })
             .addCase(getUQuizess.rejected, (state, action) => {

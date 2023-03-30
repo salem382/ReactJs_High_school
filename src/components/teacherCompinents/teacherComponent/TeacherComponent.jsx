@@ -20,14 +20,13 @@ const TeacherComponent = ({teachers}) => {
       <div className="teachersCards">
           <>
             {teachers.map((teacher) => <div key={teacher.id} className="teacher">
-            <img src={"https://newbrains-edu.com/profileImages/teachers/"+ teacher.image} alt={teacher.name} 
+            <img src={"http://localhost:5000/"+ teacher.image} alt={teacher.name} 
               style={{height:"200px"}}
             />
             <div className="teacher-info">
-              <h4 className="name">{teacher.name}</h4>
-              <p className="school fw-bold">High School</p> <br/>
-              <p className="school fw-bold">{teacher.subject.name} teacher</p> <br/>
-              <p className="school fw-bold">{teacher.subject.section}</p>
+              <h4 className='name'>Mr. {teacher.name}</h4>
+              <span className='school'>subject :{teacher.subject}</span> <br/>
+              <span className='school'> grade :{teacher. grade}</span>
             </div>
             {/* <button className="action">{t("ourTeachers-card-button")}</button> */}
           </div>)}
