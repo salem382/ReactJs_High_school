@@ -33,5 +33,4 @@ This project is a React website that provides educational content in multiple la
 * Integration of videos and PDF documents within each lesson to facilitate learning.
 * Assignment management system to create, submit, and track progress on assignments.
 * Responsive design to ensure optimal viewing experience across different devices.
-* The README template I provided earlier contains the structure and instructions for your GitHub README. You can copy and paste it into * * your README file, and then customize the sections and content according to your project's specific details.
 
