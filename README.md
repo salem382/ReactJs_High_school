@@ -23,8 +23,15 @@ To Visit App:
 * bootstrap
 
 ## what this website do
-* high school that have two section sciences and humanities and three grade first, second and third
-* student can see teacher who studey in the school and see videos and pdf for every lessons
-* after lessons take the quizzess for this lessons and after finsh the quiz get his grade
-* in student profile he can receive all the grades he has earned
+
+This project is a React website that provides educational content in multiple languages, including Arabic and English. It allows users to explore various subjects, navigate through units and lessons, access videos and PDFs for each lesson, and manage assignments.
+
+## Key Features:
+
+* Multi-language support for Arabic and English, allowing users to switch between languages.
+* Display of subjects, units, and lessons, providing a hierarchical structure for organizing educational content.
+* Integration of videos and PDF documents within each lesson to facilitate learning.
+* Assignment management system to create, submit, and track progress on assignments.
+* Responsive design to ensure optimal viewing experience across different devices.
+* The README template I provided earlier contains the structure and instructions for your GitHub README. You can copy and paste it into * * your README file, and then customize the sections and content according to your project's specific details.
 
