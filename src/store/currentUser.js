@@ -7,7 +7,7 @@ export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
     try {
         const {data} = await axios.get('http://localhost:5000/user', {
             headers: {
-              token: `${localStorage.getItem("newbrainsToken")}`
+              token: `${localStorage.getItem("heighNewbrainsToken")}`
             }
         })
         return data;
@@ -28,6 +28,7 @@ const currentUser = createSlice({
             state.error = null;
           })
           .addCase(getUser.fulfilled, (state, action) => {
+            console.log(action.payload);
             state.isLoading = false;
             state.user = { ...action.payload.user };
           })

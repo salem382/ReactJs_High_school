@@ -62,7 +62,7 @@ const Quiz = () => {
   return (
     <div className='quiz'>
 
-             {currentQuiz.questions && currentQuiz.questions.map((question) =><form onSubmit={(e) => handelSubmit(e)}  key={question._id}
+             {currentQuiz.myQuestions && currentQuiz.myQuestions.map((question) =><form onSubmit={(e) => handelSubmit(e)}  key={question._id}
               className='quizContainer pt-3'
               data-id = {question._id}
                data-choice={""}

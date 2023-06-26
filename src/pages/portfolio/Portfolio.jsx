@@ -21,7 +21,7 @@ const Portfolio = () => {
     try {
         const {data} = await axios.get('http://localhost:5000/result', {
           headers: {
-            token: `${localStorage.getItem("newbrainsToken")}`
+            token: `${localStorage.getItem("heighNewbrainsToken")}`
           }
       });
 

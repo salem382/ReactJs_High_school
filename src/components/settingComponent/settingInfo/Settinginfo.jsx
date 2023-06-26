@@ -91,7 +91,7 @@ const Settinginfo = () => {
         formData,
         {
           headers: {
-            token: `${localStorage.getItem('newbrainsToken')}`,
+            token: `${localStorage.getItem('heighNewbrainsToken')}`,
             'content-type': 'multipart/form-data'
           }
         }

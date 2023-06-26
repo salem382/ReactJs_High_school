@@ -39,7 +39,7 @@ const unitsSlice = createSlice({
     reducers:{
        
         setCurrentLessons :(state, action) => {
-            state.currentUnitsLessons = [...state.units[action.payload].lessons];
+            state.currentUnitsLessons = [...state.units[action.payload].myLessons];
             state.currentUnitsLessons.length > 0 ? state.noNext = true : state.noNext = false; 
             state.currentUnit = state.units[action.payload].name;
         },
@@ -66,8 +66,9 @@ const unitsSlice = createSlice({
             .addCase(getUnits.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.units= JSON.parse(JSON.stringify(action.payload.units));
-                state.currentUnitsLessons = [...state.units[0].lessons];
-                state.activeVideo = {...[...state.units[0].lessons][0]};
+               console.log(state.units[0].lessons)
+                state.currentUnitsLessons = [...state.units[0].myLessons];
+                state.activeVideo = {...[...state.units[0].myLessons][0]};
                 state.currentUnit = state.units[0].name;
                 state.activeVideoIndex == state.currentUnitsLessons.length - 1 ? state.noNext = true :state.noNext = false; 
             })

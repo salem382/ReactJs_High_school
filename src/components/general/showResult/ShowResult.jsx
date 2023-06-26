@@ -22,7 +22,7 @@ const ShowResult = ({answers}) => {
            const {data} = await axios.post(`http://localhost:5000/result`, sendingData,
            {
             headers: {
-              token: `${localStorage.getItem("newbrainsToken")}`,
+              token: `${localStorage.getItem("heighNewbrainsToken")}`,
             },
           }
            

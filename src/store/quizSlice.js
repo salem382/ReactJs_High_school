@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 export const getUQuizess = createAsyncThunk('quizess/getUQuizess',
 
 async(quizId, thunkAPI) => {
@@ -11,7 +10,7 @@ async(quizId, thunkAPI) => {
         const {data} = await axios.get (`http://localhost:5000/assignment/${quizId}`,
         {
             headers: {
-              token: `${localStorage.getItem("newbrainsToken")}`,
+              token: `${localStorage.getItem("heighNewbrainsToken")}`,
             }
         })  
               
@@ -37,7 +36,7 @@ const quizessSlice = createSlice({
         setCurrentQuiz: (state, action) => {
            state.currentQuiz = {...state.quizess[action.payload]};
            state.currentQuizIndex = Number(action.payload);
-            state.totalQuestions = state.currentQuiz.questions.length;
+            state.totalQuestions = state.currentQuiz.myQuestions.length;
         }
     },
     extraReducers: (builder) => {
@@ -48,9 +47,10 @@ const quizessSlice = createSlice({
             })
             .addCase(getUQuizess.fulfilled, (state, action) => {
                 state.isLoading = false;
+                console.log(action.payload.quizes)
                 state.quizess = JSON.parse(JSON.stringify(action.payload.quizes));
                 state.currentQuiz = {...state.quizess[0]};
-                state.totalQuestions = state.currentQuiz.questions.length;
+                state.totalQuestions = state.currentQuiz.myQuestions.length;
             })
             .addCase(getUQuizess.rejected, (state, action) => {
                 state.isLoading = false;
